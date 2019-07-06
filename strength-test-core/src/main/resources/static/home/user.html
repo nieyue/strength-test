@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="viewport"
+          content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+    <title>我的</title>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/base.css">
+    <style>
+        .address-name{
+            background-color:#fff;
+            padding:5px 15px;
+            height: 30px;
+            line-height: 30px;
+            border:1px solid #ececec;
+            position: relative;
+            left: 0;
+            top:0;
+        }
+        .address-name:hover{
+            background-color:#ccc;
+        }
+
+    </style>
+</head>
+<body>
+<div class="nav-wrap">
+    <span class="nav-wrap-title">
+        我的
+    </span>
+</div>
+    <div>
+        <div style="padding-top:68px;height: 130px;">
+            <div  style="padding-top:20px;color:#fff;">
+                <img src="resources/img/head_2.png" style="margin-left:30px;width:88px;" alt="">
+                <div style="width:calc(100% - 180px);font-size:1.6rem;display:inline-block;vertical-align:top;margin-top:16px;margin-left:20px;">
+                    <div id="phone"></div>
+                    <div >
+                        剩余：<span id="surplusNumber"></span>次
+                    </div>
+                </div>
+                <div style="display:inline-block;vertical-align:top;margin-top:30px;width:30px;">
+                    <span style="font-size:1.6rem;" onclick="business.goback()">&gt;</span>
+                </div>
+            </div>
+        </div>
+        <div style="width:96%;margin-left:2%;">
+            <div class="address-name" id="merOrder">
+                <span>订单中心</span>
+                <span style="float:right;color:#999;">&gt;</span>
+            </div>
+            <div class="address-name" id="receiptInfo">
+                <span>配送中心</span>
+                <span style="float: right;color:#999;">&gt;</span>
+            </div>
+           <!-- <div class="address-name" id="contact">
+                <span>联系我们</span>
+                <span style="float: right">>></span>
+            </div>-->
+            <div  style="text-align: center;">
+                <span style="background-color: red;border:5px;height: 38px;display: inline-block;color:#fff;width:100%;line-height: 38px;" id="loginout">退出登录</span>
+            </div>
+        </div>
+
+
+    </div>
+
+<!-- 固定栏-->
+<div class="mer-footer">
+    <div class ="mer-footer-div" style="width:25%;left:0;color:red;">
+        <a onclick="business.gonav('index')" style="background:url('resources/img/button_home.png');background-size:100% 100%;">
+        </a>
+    </div>
+    <div class ="mer-footer-div" style="width:25%;left:25%">
+        <a onclick="business.gonav('card')" style="background:url('resources/img/button_baobaoka.png');background-size:100% 100%;">
+        </a>
+    </div>
+    <div class ="mer-footer-div" style="width:25%;left:50%">
+        <a onclick="business.gonav('recharge')" style="background:url('resources/img/button_chongzhi.png');background-size:100% 100%;">
+        </a>
+    </div>
+    <div class ="mer-footer-div" style="width:25%;left:75%;opacity: 1;">
+        <a  style="background:url('resources/img/button_my.png');background-size:100% 100%;">
+        </a>
+    </div>
+
+</div>
+<!-- 固定栏 end-->
+<script src="resources/js/jquery1.12.2.js"></script>
+<script src="resources/js/base.js"></script>
+<script>
+    business.ajax({
+        url:'/account/load',
+        async:false,
+        data:{
+            accountId:JSON.parse(localStorage.getItem("account")).accountId,
+        },
+        success:function(data){
+            localStorage.setItem("account",JSON.stringify(data.data[0]));
+            localStorage.setItem("role",JSON.stringify(data.data[0].role));
+        },
+        fail:function(data){
+        }
+    })
+    business.ajax({
+        url:'/number/list',
+        async:false,
+        data:{
+            accountId:JSON.parse(localStorage.getItem("account")).accountId,
+        },
+        success:function(data){
+           var numberList=data.data;
+           $("#surplusNumber").text(numberList[0].surplusNumber);
+            },
+        fail:function(data){
+        }
+    })
+    //初始化
+    var account=JSON.parse(localStorage.getItem("account"));
+    if(!account){
+        sessionStorage.clear();
+        localStorage.clear();
+    }
+    $("#phone").text(account.phone)
+
+    //订单中心
+    $("#merOrder").click(function(){
+        business.gonav("mer_order",true);
+    })
+    //配送中心
+    $("#receiptInfo").click(function(){
+        business.gonav("receipt_info",true);
+    })
+    //我的福利
+    $("#welfare").click(function(){
+    business.gonav("welfare",true);
+
+    })
+    //联系我们
+    $("#contact").click(function(){
+        business.gonav("contact",false);
+    })
+    //退出登录
+    $("#loginout").click(function(){
+       business.myLoginOut("确定退出吗？",function(){
+           business.ajax({
+               url:'/account/loginout',
+               data:{
+                   accountId:JSON.parse(localStorage.getItem("account")).accountId,
+               },
+               success:function(data){
+                   business.myLoadingToast('退出成功');
+                   localStorage.clear();
+                   business.gologin()
+               },
+               fail:function(data){
+               }
+           })
+       })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+          content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>jssdk分享页面</title>
+</head>
+<body>
+<div id="app">
+</div>
+<script src="../../home/resources/js/jquery1.12.2.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script src="../../home/resources/js/base64.js"></script>
+<script src="../../home/resources/js/base.js"></script>
+<script>
+
+    /**微信公众号分享
+     *
+     * @param params
+     *
+     */
+    business.wxMPShare=function(params) {
+        business.wx = {
+            appId: '',
+            timestamp: '',
+            nonceStr: '',
+            package: '',
+            signType: '',
+            paySign: '',
+        }
+        //初始化，判断是否微信浏览器
+        if (business.isWeiXinBrowse()) {
+            //微信授权登录
+           /* if (!sessionStorage.getItem("weixinlogin")) {
+                sessionStorage.setItem("weixinlogin", 1);
+                location.replace("/weiXinMp/authorize");
+            } else {
+                //location.replace("/user/login");
+            }*/
+            //配置
+            //获取配置
+            function getConfig() {
+                $.ajax({
+                    url: "/weiXinMp/js/connection",
+                    type: "post",
+                    xhrFields: {
+                        withCredentials: true,
+                    },
+                    data: {
+                        //url: encodeURIComponent(location.href)
+                        url: location.href
+                    },
+                    success: function (data) {
+                        console.log(data)
+                        var appId = data.appId;
+                        var timestamp = data.timestamp;
+                        var nonceStr = data.nonceStr;
+                        var signature = data.signature;
+                        wx.config({
+                            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                            appId: appId, // 必填，公众号的唯一标识
+                            timestamp: timestamp, // 必填，生成签名的时间戳
+                            nonceStr: nonceStr, // 必填，生成签名的随机串
+                            signature: signature,// 必填，签名
+                            jsApiList: ['checkJsApi',
+                                'onMenuShareTimeline',
+                                'onMenuShareAppMessage',
+                                'onMenuShareQQ',
+                                'onMenuShareWeibo',
+                                'onMenuShareQZone',
+                                'hideMenuItems',
+                                'showMenuItems',
+                                'hideAllNonBaseMenuItem',
+                                'showAllNonBaseMenuItem',
+                                'translateVoice',
+                                'startRecord',
+                                'stopRecord',
+                                'onVoiceRecordEnd',
+                                'playVoice',
+                                'onVoicePlayEnd',
+                                'pauseVoice',
+                                'stopVoice',
+                                'uploadVoice',
+                                'downloadVoice',
+                                'chooseImage',
+                                'previewImage',
+                                'uploadImage',
+                                'downloadImage',
+                                'getNetworkType',
+                                'openLocation',
+                                'getLocation',
+                                'hideOptionMenu',
+                                'showOptionMenu',
+                                'closeWindow',
+                                'scanQRCode',
+                                'chooseWXPay',
+                                'openProductSpecificView',
+                                'addCard',
+                                'chooseCard',
+                                'openCard'] // 必填，需要使用的JS接口列表
+                        });
+
+
+                    }
+                })
+            }
+
+            getConfig();
+
+
+
+            wx.ready(function () {
+                wx.checkJsApi({
+                    jsApiList: ['onMenuShareAppMessage'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+                    success: function(res) {
+                        console.log(res)
+                        // 以键值对的形式返回，可用的api值true，不可用为false
+                        // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+                    }
+                });
+                var title="昨天的小姐姐在家里竟然..."
+                var desc="文静正在房间里找什么东西，突然身后来了一个意想不到的朋友...."
+                var title="昨天的小姐姐在家里竟然..."
+                var imgUrl="http://tg2.gx2i.cn/resources/img/1556106428168.jpg"
+                wx.onMenuShareAppMessage({
+                    title:title,
+                    desc: desc,
+                    link: location.href.split('#')[0],
+                    imgUrl: imgUrl,
+                    trigger: function (res) {
+                        // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
+                        // alert('用户点击发送给朋友');
+                    },
+                    success: function (res) {
+                        business.myLoadingToast("分享成功", null);
+                    },
+                    cancel: function (res) {
+                        business.myLoadingToast("取消分享", null);
+                    },
+                    fail: function (res) {
+                        console.log(res)
+                        business.myLoadingToast("分享失败", null);
+                    }
+                });
+
+            });
+        }
+    }
+
+    business.wxMPShare(null)
+</script>
+
+</body>
+</html>
