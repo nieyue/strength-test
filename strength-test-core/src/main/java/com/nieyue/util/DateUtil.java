@@ -442,8 +442,36 @@ public class DateUtil {
      c.setTime(new Date()); 
      c.set(Calendar.DAY_OF_WEEK, c.getFirstDayOfWeek() + 6); // Sunday 
      return c.getTime(); 
-     } 
-    //  输出结果：  
+     }
+
+	/**
+	 * 根据生日获取年龄
+	 * @param birthday
+	 * @return
+	 */
+	public static int getAgeByBirth(Date birthday) {
+		int age = 0;
+		try {
+			Calendar now = Calendar.getInstance();
+			now.setTime(new Date());// 当前时间
+
+			Calendar birth = Calendar.getInstance();
+			birth.setTime(birthday);
+
+			if (birth.after(now)) {//如果传入的时间，在当前时间的后面，返回0岁
+				age = 0;
+			} else {
+				age = now.get(Calendar.YEAR) - birth.get(Calendar.YEAR);
+				if (now.get(Calendar.DAY_OF_YEAR) > birth.get(Calendar.DAY_OF_YEAR)) {
+					age += 1;
+				}
+			}
+			return age;
+		} catch (Exception e) {//兼容性更强,异常后返回数据
+			return 0;
+		}
+	}
+    //  输出结果：
     //  timeStamp=1417792627  
     //  date=2014-12-05 23:17:07  
     //  1417792627  

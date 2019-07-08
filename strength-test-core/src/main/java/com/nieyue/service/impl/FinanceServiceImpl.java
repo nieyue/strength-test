@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.nieyue.bean.Account;
 import com.nieyue.bean.Config;
 import com.nieyue.bean.Finance;
-import com.nieyue.bean.FinanceRecord;
 import com.nieyue.business.OrderBusiness;
 import com.nieyue.exception.AccountIsNotExistException;
 import com.nieyue.exception.CommonRollbackException;
@@ -13,11 +12,9 @@ import com.nieyue.exception.FinanceMoneyNotEnoughException;
 import com.nieyue.exception.PayException;
 import com.nieyue.service.AccountService;
 import com.nieyue.service.ConfigService;
-import com.nieyue.service.FinanceRecordService;
 import com.nieyue.service.FinanceService;
 import com.nieyue.util.Arith;
 import com.nieyue.util.MyDom4jUtil;
-import com.nieyue.util.SnowflakeIdWorker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -34,8 +31,8 @@ public class FinanceServiceImpl extends BaseServiceImpl<Finance,Long> implements
     AccountService accountService;
     @Autowired
     OrderBusiness orderBusiness;
-    @Autowired
-    FinanceRecordService financeRecordService;
+   // @Autowired
+   // FinanceRecordService financeRecordService;
     @Autowired
     ConfigService configService;
     //管理员充值
@@ -105,9 +102,9 @@ public class FinanceServiceImpl extends BaseServiceImpl<Finance,Long> implements
         List<Config> configList = configService.simplelist(null);
         if(configList.size()>0){
             Config config = configList.get(0);
-            if(money<config.getMinWithdrawals()){
+            /*if(money<config.getMinWithdrawals()){
                 throw new CommonRollbackException("提现最低额度"+config.getMinWithdrawals().toString());//余额不足
-            }
+            }*/
         }
         f.setMoney(Arith.sub(f.getMoney(), money));//减
         f.setWithdrawals(Arith.add(f.getWithdrawals(), money));
@@ -115,7 +112,7 @@ public class FinanceServiceImpl extends BaseServiceImpl<Finance,Long> implements
         if(!b){
             throw new PayException();
         }
-        FinanceRecord fr=new FinanceRecord();
+       /* FinanceRecord fr=new FinanceRecord();
         fr.setAccountId(a.getAccountId());
         fr.setRealname(realname);
         fr.setMark(accountName);//备注中放标记
@@ -130,7 +127,7 @@ public class FinanceServiceImpl extends BaseServiceImpl<Finance,Long> implements
         b = financeRecordService.add(fr);
         if(!b){
             throw new PayException();
-        }
+        }*/
         return f;
     }
 }

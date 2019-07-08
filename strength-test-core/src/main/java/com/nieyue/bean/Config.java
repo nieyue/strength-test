@@ -45,36 +45,6 @@ public class Config implements Serializable{
 	@ApiModelProperty(value="平台联系qq")
 	private String serviceQq;
 	/**
-	 * 最大订单商品数量
-	 */
-	@ApiModelProperty(value="最大订单商品数量")
-	private Integer orderMerMaxNumber;
-	/**
-	 * 推广分成比例，单位%
-	 */
-	@ApiModelProperty(value="推广分成比例，单位%")
-	private Double spreadProportion;
-	/**
-	 * 上级享受推广分成比例，单位%
-	 */
-	@ApiModelProperty(value="上级享受推广分成比例，单位%")
-	private Double masterSpreadProportion;
-	/**
-	 * 提现最低额度
-	 */
-	@ApiModelProperty(value="提现最低额度%")
-	private Double minWithdrawals;
-	/**
-	 * 提现手续费比例，单位%
-	 */
-	@ApiModelProperty(value="提现手续费比例，单位%")
-	private Double withdrawalsProportion;
-	/**
-	 * 无提现手续费最低额度
-	 */
-	@ApiModelProperty(value="无提现手续费最低额度")
-	private Double withdrawalsMinBrokerage;
-	/**
 	 * 创建时间
 	 */
 	@ApiModelProperty(value="创建时间",example="创建时间")

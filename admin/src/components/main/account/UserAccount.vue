@@ -42,10 +42,14 @@
           <Input type="text" v-model="addAccount.phone" placeholder="手机">
           </Input>
         </FormItem>
-        <FormItem prop="password" label="密码:">
+        <FormItem  label="生日:">
+          <DatePicker type="date" placeholder="生日"  format="yyyy-MM-dd"
+            @on-change="getAddBirthday" style="width: 300px" ></DatePicker>
+        </FormItem>
+      <!--   <FormItem prop="password" label="密码:">
           <Input type="password" v-model="addAccount.password" placeholder="密码">
           </Input>
-        </FormItem>
+        </FormItem> -->
 
         <!-- <FormItem prop="icon" label="图像(上传或者填写):">
             <my-upload :defaultUpload="addAccount.icon" @uploadList="getAddIcon"></my-upload>
@@ -95,6 +99,10 @@
         <FormItem prop="phone" label="手机:">
           <Input type="text" v-model="updateAccount.phone" placeholder="手机">
           </Input>
+        </FormItem>
+         <FormItem  label="生日:">
+          <DatePicker type="date" placeholder="生日" v-model="updateAccount.birthday"  format="yyyy-MM-dd"
+            @on-change="getUpdateBirthday" style="width: 300px" ></DatePicker>
         </FormItem>
         <!-- <FormItem prop="password" label="密码:">
           <Input type="password" v-model="updateAccount.password" placeholder="密码">
@@ -223,7 +231,7 @@ export default {
             +(this.params.currentPage-1)*this.params.pageSize+this.params.startNum);
           }
         },
-         {
+       /*   {
           title: '账户id',
           key: 'accountId',
           minWidth:100,
@@ -234,7 +242,7 @@ export default {
           key: 'masterId',
           minWidth:100,
           align:'center'
-        }, 
+        }, */ 
         {
         	title:'姓名',
             key:'realname',
@@ -242,6 +250,36 @@ export default {
           align:'center'
         },
         {
+        	title:'性别',
+            key:'sex',
+            minWidth:100,
+          align:'center',
+          render: (h, params) => {
+            let sexvalue="";
+            this.sexList.forEach(element => {
+              if(element.id==params.row.sex){
+                sexvalue=element.value;
+              }
+            });
+             return  h('span',sexvalue);
+          }
+        },
+        {
+        	title:'年龄',
+            key:'age',
+            minWidth:100,
+          align:'center'
+        },
+        {
+        	title:'生日',
+            key:'birthday',
+            minWidth:100,
+          align:'center',
+          render: (h, params) => {
+             return  h('span',params.row.birthday.substr(0,10));
+          }
+        },
+        /* {
         	title:'图像',
             key:'icon',
             minWidth:100,
@@ -256,14 +294,14 @@ export default {
               }
             })
           }
-        },
+        }, */
           {
-        	title:'手机(登录账户)',
+        	title:'手机号',
             key:'phone',
             minWidth:100,
           align:'center'
         },
-          {
+       /*    {
           title:'邀请码',
           key:'inviteCode',
             minWidth:100,
@@ -283,7 +321,7 @@ export default {
                       }, '更新')
              ]);
           }
-        }, 
+        },  
          {
         	title:'身份证',
             key:'identityCards',
@@ -356,7 +394,7 @@ export default {
               }
             })
           }
-        }, 
+        }, */
         {
         	title:'状态',
             key:'status',
@@ -372,21 +410,7 @@ export default {
              return  h('span',statusvalue);
           }
         },
-        {
-        	title:'性别',
-            key:'sex',
-            minWidth:100,
-          align:'center',
-          render: (h, params) => {
-            let sexvalue="";
-            this.sexList.forEach(element => {
-              if(element.id==params.row.sex){
-                sexvalue=element.value;
-              }
-            });
-             return  h('span',sexvalue);
-          }
-        },
+        
         {
         	title:'创建时间',
           key:'createDate',
@@ -513,10 +537,10 @@ export default {
                         ]),
                         h("div",[
                           varhh21,
-                          varhh22,
+                         // varhh22,
                         ]),
                         h("div",[
-                          varhh31,
+                         // varhh31,
                           //varhh32,
                         ]),
                       
@@ -525,10 +549,10 @@ export default {
              s= h("div",[
                         h("div",[
                           varhh21,
-                          varhh22,
+                        //  varhh22,
                         ]),
                         h("div",[
-                          varhh31,
+                          //varhh31,
                           //varhh32,
                         ]),
                       
@@ -556,6 +580,16 @@ export default {
 //切换每页条数时的回调，返回切换后的每页条数
     onPageSizeChange(pageSize){
       this.getList(pageSize)
+    },
+      //获取增加的生日
+    getAddBirthday(array){
+        this.addAccount.birthday=array+" 00:00:00"
+        console.log(this.addAccount.birthday);
+        
+    },
+    getUpdateBirthday(array){
+        this.updateAccount.birthday=array+" 00:00:00"
+        
     },
     //获取查询日期
     getParamsCreateDate(d){
@@ -619,10 +653,7 @@ export default {
          //初始化
         this.addAccount={
             icon:'',
-            totalCost:0,
-            alreadyPay:0,
-            arrears:0,
-            sex:3,
+            sex:1,
             status:1,
             roleId:this.roleList[0].roleId
         };

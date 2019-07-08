@@ -8,6 +8,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 /**
  * 账户
@@ -59,6 +60,17 @@ public class Account implements Serializable {
 	 */
 	@ApiModelProperty(value="真实姓名")
 	private String realname;
+	/**
+	 * 生日
+	 */
+	@ApiModelProperty(value="生日")
+	private Date birthday;
+	//private LocalDateTime birthday;
+	/**
+	 * 年龄
+	 */
+	@ApiModelProperty(value="年龄")
+	private Integer age;
 	/**
 	 * email
 	 */

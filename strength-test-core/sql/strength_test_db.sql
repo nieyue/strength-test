@@ -1,10 +1,10 @@
 # 数据库 
 #创建数据库
-DROP DATABASE IF EXISTS physical_strength_test_db;
-CREATE DATABASE physical_strength_test_db;
+DROP DATABASE IF EXISTS strength_test_db;
+CREATE DATABASE strength_test_db;
 
 #使用数据库
-use physical_strength_test_db;
+use strength_test_db;
 
 
 #创建角色表
@@ -57,6 +57,7 @@ country varchar(255) COMMENT '国家,默认中国',
 realname varchar(255) COMMENT '真实姓名',
 email varchar(255) COMMENT 'email',
 birthday datetime COMMENT '生日',
+age int(11) COMMENT '年龄',
 invite_code varchar(255) COMMENT '邀请码',
 auth tinyint(4) DEFAULT 1 COMMENT '认证，1没认证，2审核中，3已认证',
 identity_cards varchar(255) COMMENT '身份证',
@@ -79,28 +80,70 @@ INDEX INDEX_MASTERID (master_id) USING BTREE,
 INDEX INDEX_STATUS (status) USING BTREE
 )ENGINE = InnoDB  DEFAULT CHARSET=utf8 COMMENT='账户表';
 
+#创建财务表
+CREATE TABLE finance_tb(
+finance_id bigint(20) NOT NULL AUTO_INCREMENT COMMENT '财务id',
+password varchar(255)  COMMENT '交易密码',
+money decimal(11,2) DEFAULT 0 COMMENT '余额',
+recharge decimal(11,2) DEFAULT 0 COMMENT '充值金额',
+consume decimal(11,2) DEFAULT 0 COMMENT '消费金额',
+withdrawals decimal(11,2) DEFAULT 0 COMMENT '提现金额',
+self_profit decimal(11,2) DEFAULT 0 COMMENT '自身总收益',
+partner_profit decimal(11,2) DEFAULT 0 COMMENT '合伙人总收益',
+base_profit decimal(11,2) DEFAULT 0 COMMENT '赠送金钱',
+update_date datetime COMMENT '更新时间',
+account_id bigint(20) COMMENT '账户id外键',
+PRIMARY KEY (finance_id),
+INDEX INDEX_ACCOUNTID (account_id) USING BTREE
+)ENGINE = InnoDB  DEFAULT CHARSET=utf8 COMMENT='财务表';
+
+#创建项目表
+CREATE TABLE project_tb(
+project_id bigint(20) NOT NULL AUTO_INCREMENT COMMENT '项目id',
+name varchar(255) COMMENT '名称',
+icon varchar(255) COMMENT '图标',
+unit varchar(10) COMMENT '单位',
+summary varchar(1000) COMMENT '简介',
+create_date datetime   COMMENT '创建时间',
+update_date datetime COMMENT '更新时间',
+PRIMARY KEY (project_id)
+)ENGINE = InnoDB  DEFAULT CHARSET=utf8 COMMENT='项目表';
+
 #创建标准表
 CREATE TABLE standard_tb(
 standard_id bigint(20) NOT NULL AUTO_INCREMENT COMMENT '标准id',
-project varchar(50) COMMENT '项目',
-project_introduction varchar(255) COMMENT '项目介绍',
-summary varchar(255) COMMENT '简介',
-create_date datetime   COMMENT '创建时间',
-update_date datetime COMMENT '更新时间',
-PRIMARY KEY (standard_id)
-)ENGINE = InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品类型表';
-
-#创建商品图片表
-CREATE TABLE mer_img_tb(
-mer_img_id bigint(20) NOT NULL AUTO_INCREMENT COMMENT '商品图片id',
-img_address varchar(255) COMMENT '图片地址',
-number int(11) COMMENT '图片顺序',
+age int(11) COMMENT '年龄',
+rank tinyint(4) COMMENT '等级,1不良,2未达,3合格,4良好,5优秀',
+low double(11,2) COMMENT '低位',
+high double(11,2) COMMENT '高位',
+item varchar(255) COMMENT '项',
 create_date datetime COMMENT '创建时间',
 update_date datetime COMMENT '更新时间',
-mer_id bigint(20) COMMENT '商品id外键',
-PRIMARY KEY (mer_img_id),
-INDEX INDEX_MERID (mer_id) USING BTREE
-)ENGINE = InnoDB DEFAULT CHARSET=utf8 COMMENT='商品图片表';
+project_id bigint(20) COMMENT '项目id外键',
+PRIMARY KEY (standard_id),
+INDEX INDEX_AGE (age) USING BTREE,
+INDEX INDEX_RANK (rank) USING BTREE,
+INDEX INDEX_PROJECTID (project_id) USING BTREE
+)ENGINE = InnoDB  DEFAULT CHARSET=utf8 COMMENT='标准表';
+
+#创建测评表
+CREATE TABLE assess_tb(
+assess_id bigint(20) NOT NULL AUTO_INCREMENT COMMENT '测评id',
+age int(11) COMMENT '年龄',
+rank tinyint(4) COMMENT '等级,1不良,2未达,3合格,4良好,5优秀',
+score double(11,2) COMMENT '结果值',
+item varchar(255) COMMENT '项',
+create_date datetime   COMMENT '创建时间',
+update_date datetime COMMENT '更新时间',
+project_id bigint(20) COMMENT '项目id外键',
+account_id bigint(20) COMMENT '账户id外键',
+PRIMARY KEY (assess_id),
+INDEX INDEX_AGE (age) USING BTREE,
+INDEX INDEX_RANK (rank) USING BTREE,
+INDEX INDEX_PROJECTID (project_id) USING BTREE,
+INDEX INDEX_ACCOUNTID (account_id) USING BTREE
+)ENGINE = InnoDB  DEFAULT CHARSET=utf8 COMMENT='测评表';
+
 
 #创建配置表
 CREATE TABLE config_tb(
@@ -108,12 +151,6 @@ CREATE TABLE config_tb(
   platform_name varchar(255)  COMMENT '平台名称',
   service_phone varchar(255)  COMMENT '平台联系电话',
   service_qq varchar(255)  COMMENT '平台联系qq',
-  order_mer_max_number int(11) DEFAULT 5 COMMENT '最大订单商品数量',
-  spread_proportion decimal(11,2) DEFAULT 5  COMMENT '推广分成比例，单位%',
-  master_spread_proportion decimal(11,2) DEFAULT 2  COMMENT '上级享受推广分成比例，单位%',
-  min_withdrawals decimal(11,2) DEFAULT 500  COMMENT '提现最低额度',
-  withdrawals_proportion decimal(11,2) DEFAULT 3  COMMENT '提现手续费比例，单位%',
-  withdrawals_min_brokerage decimal(11,2) DEFAULT 2000  COMMENT '无提现手续费最低额度',
   create_date datetime COMMENT '创建时间',
   update_date datetime COMMENT '更新时间',
   PRIMARY KEY (config_id)
@@ -133,25 +170,13 @@ config_id,
 platform_name,
 service_phone,
 service_qq,
-order_mer_max_number,
-spread_proportion,
-master_spread_proportion,
-min_withdrawals,
-withdrawals_proportion,
-withdrawals_min_brokerage,
 create_date,
 update_date)
 VALUES (
 1000,
-'本真',
+'LTX-GIVEMEFIVE少儿体能运动测评',
 '15111336587',
 '278076304',
-5,
-5,
-2,
-500,
-3,
-2000,
 now(),
 now());
 

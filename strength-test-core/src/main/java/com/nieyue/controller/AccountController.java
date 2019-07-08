@@ -1,7 +1,5 @@
 package com.nieyue.controller;
 
-import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
-import com.aliyuncs.exceptions.ClientException;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.nieyue.bean.Account;
@@ -11,7 +9,6 @@ import com.nieyue.exception.*;
 import com.nieyue.mail.SendMailDemo;
 import com.nieyue.service.AccountService;
 import com.nieyue.service.RoleService;
-import com.nieyue.thirdparty.sms.AliyunSms;
 import com.nieyue.util.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -20,7 +17,6 @@ import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.BoundHashOperations;
 import org.springframework.data.redis.core.BoundValueOperations;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.util.StringUtils;
@@ -53,8 +49,6 @@ public class AccountController extends BaseController<Account, Long>{
 	private OrderBusiness orderBusiness;
 	@Autowired
 	private StringRedisTemplate stringRedisTemplate;
-	@Autowired
-	private AliyunSms aliyunSms;
 
 	/**
 	 * 账户分页浏览
@@ -120,12 +114,13 @@ public class AccountController extends BaseController<Account, Long>{
 	 		wrapper.like(entry.getKey(),(String)entry.getValue());			
 		}
 	 	
-	 	List<Account> rl = accountService.list(pageNum, pageSize, orderName, orderWay,wrapper);
+	 	/*List<Account> rl = accountService.list(pageNum, pageSize, orderName, orderWay,wrapper);
 	 	if(rl!=null&&rl.size()>0){
 			return ResultUtil.getSlefSRSuccessList(rl);
 		}else{
 			throw new NotAnymoreException();//没有更多
-		}
+		}*/
+	 	return super.list(pageNum,pageSize,orderName,orderWay,wrapper);
 	}
 
 	/**
@@ -584,10 +579,10 @@ public class AccountController extends BaseController<Account, Long>{
 		}
 		validCodeValue.set(userValidCode.toString(), 60, TimeUnit.SECONDS);
 
-		//l.add(userValidCode.toString());
+		l.add(userValidCode.toString());
 		//手机号发送验证码
 		if(Pattern.matches(MyValidator.REGEX_PHONE,adminName)){
-			try {
+			/*try {
 				SendSmsResponse res = aliyunSms.sendSms(userValidCode.toString(),adminName, templateCode);
 				if(res.getCode().equals("OK")){
 					return ResultUtil.getSlefSRSuccessList(l);
@@ -595,7 +590,7 @@ public class AccountController extends BaseController<Account, Long>{
 			} catch (ClientException e) {
 				System.out.println(e.getMessage());
 				throw new AccountMessageException();//短信发送异常
-			}
+			}*/
 			return ResultUtil.getSlefSRSuccessList(l);
 		}else if(Pattern.matches(MyValidator.REGEX_EMAIL,adminName)){
 			//模板码 1用户注册，2修改密码，3修改提现密码，4修改手机号，5身份验证

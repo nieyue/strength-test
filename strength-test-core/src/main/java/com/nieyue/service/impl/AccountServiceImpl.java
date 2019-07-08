@@ -8,6 +8,7 @@ import java.util.Map;
 import com.nieyue.bean.*;
 import com.nieyue.exception.CommonRollbackException;
 import com.nieyue.service.*;
+import com.nieyue.util.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -61,6 +62,7 @@ public class AccountServiceImpl extends BaseServiceImpl<Account,Long> implements
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Override
 	public boolean add(Account t) {
+		t.setAge(DateUtil.getAgeByBirth(t.getBirthday()));
 		boolean b = super.add(t);
 		if(!b){
 			throw new CommonRollbackException();
@@ -85,6 +87,13 @@ public class AccountServiceImpl extends BaseServiceImpl<Account,Long> implements
 		}
 		return b;
 	}
+	@Transactional(propagation=Propagation.REQUIRED)
+	@Override
+	public boolean update(Account account) {
+		account.setAge(DateUtil.getAgeByBirth(account.getBirthday()));
+		return super.update(account);
+	}
+
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Override
 	public boolean delete(Long accountId) {

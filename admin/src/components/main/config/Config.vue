@@ -24,42 +24,6 @@
           <Input type="text" v-model="addConfig.serviceQq" placeholder="平台联系qq">
           </Input>
         </FormItem>
-        <FormItem prop="orderMerMaxNumber" label="最大订单商品数量:">
-          <InputNumber   :max="10000000" :min="0" :step="1" style="width:180px" v-model="addConfig.orderMerMaxNumber"
-            placeholder="最大订单商品数量">
-          </InputNumber >
-        </FormItem>
-        <FormItem prop="spreadProportion"  label="推广分成比例，单位%:">
-          <InputNumber   :max="100" :min="0" :step="0.01" style="width:180px"  v-model="addConfig.spreadProportion" 
-            :formatter="value => `${value}%`"
-            :parser="value => value.replace('%', '')"
-            placeholder="推广分成比例，单位%">
-          </InputNumber >
-        </FormItem>
-        <FormItem prop="masterSpreadProportion"  label="上级享受推广分成比例，单位%:">
-          <InputNumber   :max="100" :min="0" :step="0.01" style="width:180px"  v-model="addConfig.masterSpreadProportion" 
-            :formatter="value => `${value}%`"
-            :parser="value => value.replace('%', '')"
-            placeholder="上级享受推广分成比例，单位%">
-          </InputNumber >
-        </FormItem>
-        <FormItem prop="minWithdrawals"  label="提现最低额度:">
-          <InputNumber   :max="1000000000" :min="0" :step="0.01" style="width:180px"  v-model="addConfig.minWithdrawals" 
-            placeholder="提现最低额度">
-          </InputNumber >
-        </FormItem>
-        <FormItem prop="withdrawalsProportion"  label="提现手续费比例，单位%:">
-          <InputNumber   :max="100" :min="0" :step="0.01" style="width:180px"  v-model="addConfig.withdrawalsProportion"
-          :formatter="value => `${value}%`"
-            :parser="value => value.replace('%', '')" 
-            placeholder="提现手续费比例，单位%">
-          </InputNumber >
-        </FormItem>
-        <FormItem prop="withdrawalsMinBrokerage"  label="无提现手续费最低额度:">
-          <InputNumber   :max="1000000000" :min="0" :step="0.01" style="width:180px"  v-model="addConfig.withdrawalsMinBrokerage" 
-            placeholder="无提现手续费最低额度">
-          </InputNumber >
-        </FormItem>
       </Form>
       <div slot='footer'>
         <Button  @click='addCancel'>取消</Button>
@@ -89,42 +53,6 @@
           <Input type="text" v-model="updateConfig.serviceQq" placeholder="平台联系qq">
           </Input>
         </FormItem>
-        <FormItem prop="orderMerMaxNumber" label="最大订单商品数量:">
-          <InputNumber   :max="10000000" :min="0" :step="1" style="width:180px" v-model="updateConfig.orderMerMaxNumber"
-            placeholder="最大订单商品数量">
-          </InputNumber >
-        </FormItem>
-        <FormItem prop="spreadProportion"  label="推广分成比例，单位%:">
-          <InputNumber   :max="100" :min="0" :step="0.01" style="width:180px"  v-model="updateConfig.spreadProportion" 
-            :formatter="value => `${value}%`"
-            :parser="value => value.replace('%', '')"
-            placeholder="推广分成比例，单位%">
-          </InputNumber >
-        </FormItem>
-        <FormItem prop="masterSpreadProportion"  label="上级享受推广分成比例，单位%:">
-          <InputNumber   :max="100" :min="0" :step="0.01" style="width:180px"  v-model="updateConfig.masterSpreadProportion" 
-            :formatter="value => `${value}%`"
-            :parser="value => value.replace('%', '')"
-            placeholder="上级享受推广分成比例，单位%">
-          </InputNumber >
-        </FormItem>
-        <FormItem prop="minWithdrawals"  label="提现最低额度:">
-          <InputNumber   :max="1000000000" :min="0" :step="0.01" style="width:180px"  v-model="updateConfig.minWithdrawals" 
-            placeholder="提现最低额度">
-          </InputNumber >
-        </FormItem>
-        <FormItem prop="withdrawalsProportion"  label="提现手续费比例，单位%:">
-          <InputNumber   :max="100" :min="0" :step="0.01" style="width:180px"  v-model="updateConfig.withdrawalsProportion"
-          :formatter="value => `${value}%`"
-            :parser="value => value.replace('%', '')" 
-            placeholder="提现手续费比例，单位%">
-          </InputNumber >
-        </FormItem>
-        <FormItem prop="withdrawalsMinBrokerage"  label="无提现手续费最低额度:">
-          <InputNumber   :max="1000000000" :min="0" :step="0.01" style="width:180px"  v-model="updateConfig.withdrawalsMinBrokerage" 
-            placeholder="无提现手续费最低额度">
-          </InputNumber >
-        </FormItem>
       </Form>
       <div slot='footer'>
         <Button  @click='updateCancel'>取消</Button>
@@ -149,30 +77,6 @@
             <p>
               <span>平台联系qq：</span>
               <span v-text="updateConfig.serviceQq"></span>
-            </p>
-            <p>
-              <span>最大订单商品数量：</span>
-              <span v-text="updateConfig.orderMerMaxNumber"></span>个
-            </p>
-            <p>
-              <span>推广分成比例，单位%：</span>
-              <span v-text="updateConfig.spreadProportion"></span>%
-            </p>
-            <p>
-              <span>上级享受推广分成比例，单位%：</span>
-              <span v-text="updateConfig.masterSpreadProportion"></span>%
-            </p>
-            <p>
-              <span>提现最低额度：</span>
-              <span v-text="updateConfig.minWithdrawals"></span>元
-            </p>
-            <p>
-              <span>提现手续费比例，单位%：</span>
-              <span v-text="updateConfig.withdrawalsProportion"></span>%
-            </p>
-            <p>
-              <span>无提现手续费最低额度：</span>
-              <span v-text="updateConfig.withdrawalsMinBrokerage"></span>元
             </p>
             <p>
               <span>创建时间：</span>

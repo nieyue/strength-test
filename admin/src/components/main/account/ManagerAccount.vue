@@ -176,7 +176,7 @@ export default {
             key:'phone',
           align:'center'
         },
-         {
+       /*   {
         	title:'邀请码',
             minWidth:100,
           align:'center',
@@ -195,7 +195,7 @@ export default {
                       }, '更新')
              ]);
           }
-        },
+        }, */
         {
           title:'姓名',
           minWidth:100,
