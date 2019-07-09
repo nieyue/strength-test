@@ -40,74 +40,14 @@ const router= new Router({
           component: resolve=>require(['@/components/main/config/Config'],resolve)
         },
         {
-          path: 'articleCate/:pathParams',
-          name: '文章类型',
-          component: resolve=>require(['@/components/main/article/ArticleCate'],resolve)
+          path: 'project/:pathParams',
+          name: '项目',
+          component: resolve=>require(['@/components/main/project/Project'],resolve)
         },
         {
-          path: 'article/:pathParams',
-          name: '文章',
-          component: resolve=>require(['@/components/main/article/Article'],resolve)
-        },
-        {
-          path: 'account/selfAccount',
-          name: '个人信息',
-          component: resolve=>require(['@/components/main/account/SelfAccount'],resolve),
-        },
-        {
-          path: 'account/managerAccount',
-          name: '管理员',
-          component: resolve=>require(['@/components/main/account/ManagerAccount'],resolve),
-        },
-        {
-          path: 'account/userAccount',
-          name: '用户',
-          component: resolve=>require(['@/components/main/account/UserAccount'],resolve),
-        },
-        {
-          path: 'finance/:pathParams',
-          name: '财务',
-          component: resolve=>require(['@/components/main/finance/Finance'],resolve),
-        },
-        {
-          path: 'financeRecord/:pathParams',
-          name: '财务记录',
-          component: resolve=>require(['@/components/main/finance/FinanceRecord'],resolve),
-        },
-        {
-          path: 'withdrawals/:pathParams',
-          name: '提现记录',
-          component: resolve=>require(['@/components/main/finance/Withdrawals'],resolve),
-        },
-        {
-          path: 'receiptInfo/:pathParams',
-          name: '收货地址',
-          component: resolve=>require(['@/components/main/receiptInfo/ReceiptInfo'],resolve),
-        },
-        {
-          path: 'integral/:pathParams',
-          name: '积分',
-          component: resolve=>require(['@/components/main/account/Integral'],resolve),
-        },
-        {
-          path: 'merCate/:pathParams',
-          name: '商品类型',
-          component: resolve=>require(['@/components/main/mer/MerCate'],resolve),
-        },
-        {
-          path: 'mer/:pathParams',
-          name: '商品',
-          component: resolve=>require(['@/components/main/mer/Mer'],resolve),
-        },
-        {
-          path: 'merImg/:pathParams',
-          name: '商品图片',
-          component: resolve=>require(['@/components/main/mer/MerImg'],resolve),
-        },
-        {
-          path: 'order/:pathParams',
-          name: '订单',
-          component: resolve=>require(['@/components/main/order/Order'],resolve),
+          path: 'standard/:pathParams',
+          name: '标准',
+          component: resolve=>require(['@/components/main/project/Standard'],resolve)
         },
          {
           path: 'role/:pathParams',

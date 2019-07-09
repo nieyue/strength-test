@@ -1,0 +1,28 @@
+
+@squid:S1148î"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S1148+"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+@squid:S1148Ò"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+squid:S4165R"cRemove this useless assignment; "image" already holds the assigned value along all execution paths.(¦ŒªÕûÿÿÿÿ
+bsquid:CommentedOutCodeLinex"<This block of commented-out lines of code should be removed.(ÉÏìâ
+psquid:S2293#"YReplace the type specification in this constructor call with the diamond operator ("<>").(ç›Ò÷
+@squid:S1148½"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+usquid:S22938"YReplace the type specification in this constructor call with the diamond operator ("<>").(øœ™äüÿÿÿÿ
+@squid:S1148Û"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+wsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ðø­àþÿÿÿÿ
+Osquid:UselessImportCheck"+Remove this unused import 'java.util.Date'.(¸…¼ü
+^squid:S1075ô"ARefactor your code to get this URI from a customizable parameter.(žåØËÿÿÿÿÿ
+csquid:CommentedOutCodeLine‚"<This block of commented-out lines of code should be removed.(©£Îá
+?squid:S1148C"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+^squid:S1075è"ARefactor your code to get this URI from a customizable parameter.(áê°¼ýÿÿÿÿ
+msquid:S1149#"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(ç›Ò÷
+Ssquid:S1854à"<Remove this useless assignment to local variable "logoPath".(ÀïŒx
+wsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ð¨Ú±ÿÿÿÿÿ
+Dsquid:S1481à"-Remove this unused "logoPath" local variable.(ÀïŒx
+csquid:CommentedOutCodeLine”"<This block of commented-out lines of code should be removed.(ÉÏìâ
+U
+squid:S106÷"9Replace this use of System.out or System.err by a logger.(†Ö³ ùÿÿÿÿ
+hsquid:CommentedOutCodeLineú"<This block of commented-out lines of code should be removed.(³ç‘âüÿÿÿÿ
+Csquid:S1481ƒ"+Remove this unused "result" local variable.(žìþ“
+Usquid:S00107§"<Method has 8 parameters, which is greater than 7 authorized.(¬ï‡
+Xsquid:S1075à"ARefactor your code to get this URI from a customizable parameter.(ÀïŒx
+Ysquid:S1075„"ARefactor your code to get this URI from a customizable parameter.(ï´Ê

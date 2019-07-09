@@ -1,0 +1,23 @@
+
+T
+squid:S106X"9Replace this use of System.out or System.err by a logger.(õ•þ¼ýÿÿÿÿ
+O
+squid:S106\"9Replace this use of System.out or System.err by a logger.(Öû³œ
+Ssquid:S18543"=Remove this useless assignment to local variable "accountId".(ýÃÝ.
+O
+squid:S106<"9Replace this use of System.out or System.err by a logger.(ðž’ª
+T
+squid:S106I"9Replace this use of System.out or System.err by a logger.(õ•þ¼ýÿÿÿÿ
+"squid:ClassVariableVisibilityCheck"QMake chars a static final constant or non-public and provide accessors if needed.(¿½äÚ
+?squid:S1604O"(Make this anonymous inner class a lambda(ÉãÃ®
+?squid:S1604@"(Make this anonymous inner class a lambda(ÉãÃ®
+vsquid:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ûæ
+O
+squid:S106W"9Replace this use of System.out or System.err by a logger.(ðž’ª
+O
+squid:S1066"9Replace this use of System.out or System.err by a logger.(Âæ“ú
+T
+squid:S106="9Replace this use of System.out or System.err by a logger.(õ•þ¼ýÿÿÿÿ
+gsquid:CommentedOutCodeLine4"<This block of commented-out lines of code should be removed.(Àðœ©ýÿÿÿÿ
+O
+squid:S106H"9Replace this use of System.out or System.err by a logger.(ðž’ª

@@ -16,18 +16,18 @@
                         <span>平台配置</span>
                     </MenuItem>
                 </Submenu>
-                  <Submenu name="article">
+                  <Submenu name="project">
                     <template slot="title">
                         <Icon type="ios-paper" />
-                        <span>文章管理</span>
+                        <span>项目管理</span>
                     </template>
-                    <MenuItem :name="menu.article.articleCate" v-if="isSuperAdmin">
+                    <MenuItem :name="menu.project.project" v-if="isSuperAdmin">
                         <Icon type="ios-paper-outline" />
-                        <span>文章类型</span>
+                        <span>项目</span>
                     </MenuItem>
-                    <MenuItem :name="menu.article.article" v-if="isSuperAdmin">
+                    <MenuItem :name="menu.project.standard" v-if="isSuperAdmin">
                         <Icon type="md-paper" />
-                        <span>文章</span>
+                        <span>标准</span>
                     </MenuItem>
                 </Submenu>
                 <MenuItem name="/main/account/selfAccount">
@@ -53,38 +53,6 @@
                         <Icon type="logo-yen" />
                         <span>财务</span>
                     </MenuItem> 
-                    <MenuItem :name="menu.finance.financeRecord">
-                        <Icon type="logo-yen" />
-                        <span>财务记录</span>
-                    </MenuItem> 
-                    <MenuItem :name="menu.finance.withdrawals">
-                        <Icon type="logo-yen" />
-                        <span>提现记录</span>
-                    </MenuItem> 
-                </Submenu>
-                <Submenu name="mer">
-                    <template slot="title">
-                        <Icon type="md-videocam" />
-                        <span>商品管理</span>
-                    </template>
-                    <MenuItem :name="menu.mer.merCate">
-                        <Icon type="ios-browsers" />
-                        <span>商品类型</span>
-                    </MenuItem>
-                    <MenuItem :name="menu.mer.mer">
-                        <Icon type="ios-browsers" />
-                        <span>商品</span>
-                    </MenuItem>
-                </Submenu>
-                <Submenu name="merOrder">
-                    <template slot="title">
-                        <Icon type="ios-cart"/>
-                        <span>商品订单管理</span>
-                    </template>
-                    <MenuItem :name="menu.order.order">
-                    <Icon type="ios-browsers" />
-                    <span>商品订单</span>
-                    </MenuItem>
                 </Submenu>
                 <Submenu v-if="isSuperAdmin" name="managerAccount">
                     <template slot="title">
@@ -167,25 +135,14 @@
                  welcome:"/main/welcome/"+pp,
                  config:"/main/config/"+pp,
             },
-             //文章
-            article:{
-                 articleCate:"/main/articleCate/"+pp,
-                 article:"/main/article/"+pp,
+             //项目
+            project:{
+                 project:"/main/project/"+pp,
+                 standard:"/main/standard/"+pp,
             },
             //财务
             finance:{
                 finance:"/main/finance/"+pp,
-                financeRecord:"/main/financeRecord/"+pp,
-                withdrawals:"/main/withdrawals/"+pp,
-            },
-            //商品
-            mer:{
-                merCate:"/main/merCate/"+pp,
-                mer:"/main/mer/"+pp
-            },
-            //商品订单
-            order:{
-                order:"/main/order/"+pp
             },
             //角色权限
             rolePermission:{

@@ -1,0 +1,30 @@
+
+}squid:S2293¤"YReplace the type specification in this constructor call with the diamond operator ("<>").(õ¹ĞÍÿÿÿÿÿ8”€£Š½-
+}squid:S2293Ó"YReplace the type specification in this constructor call with the diamond operator ("<>").(õ¹ĞÍÿÿÿÿÿ8”€£Š½-
+}squid:S2293ı"YReplace the type specification in this constructor call with the diamond operator ("<>").(õ¹ĞÍÿÿÿÿÿ8”€£Š½-
+Jsquid:S1481ü"&Remove this unused "a" local variable.(â¹ÉŸüÿÿÿÿ8”€£Š½-
+isquid:S2259ä"EA "NullPointerException" could be thrown; "account" is nullable here.(Ø—”øÿÿÿÿ8”€£Š½-
+Ç%squid:RedundantThrowsDeclarationCheck‚"ˆRemove the declaration of thrown exception 'com.nieyue.exception.CommonNotRollbackException', as it cannot be thrown from method's body.(¡ëõÿÿÿÿÿ8”€£Š½-
+}squid:S2293¸"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ8”€£Š½-
+esquid:S2142å"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8”€£Š½-
+«%squid:RedundantThrowsDeclarationCheckğ"rRemove the declaration of thrown exception 'com.nieyue.exception.MySessionException' which is a runtime exception.( Ï¿á8”€£Š½-
+psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(šÚŸ8”€£Š½-
+vsquid:S2293i"YReplace the type specification in this constructor call with the diamond operator ("<>").(û¥Ù8ÁğÊˆ½-
+®%squid:RedundantThrowsDeclarationCheck¢"uRemove the declaration of thrown exception 'com.nieyue.exception.RequestLimitException' which is a runtime exception.(²¨şè8”€£Š½-
+jsquid:CommentedOutCodeLine±"<This block of commented-out lines of code should be removed.(©ÏŠ¼8”€£Š½-
+jsquid:CommentedOutCodeLineÉ"<This block of commented-out lines of code should be removed.(½‘Ñ³8”€£Š½-
+°%squid:RedundantThrowsDeclarationCheck¢"wRemove the declaration of thrown exception 'com.nieyue.exception.AccountIsExistException' which is a runtime exception.(²¨şè8”€£Š½-
+Ysquid:S1854ü"5Remove this useless assignment to local variable "a".(â¹ÉŸüÿÿÿÿ8”€£Š½-
+xsquid:S2293¤"YReplace the type specification in this constructor call with the diamond operator ("<>").(€ÛÙæ8”€£Š½-
+wsquid:S2293Á"YReplace the type specification in this constructor call with the diamond operator ("<>").(û¥Ù8”€£Š½-
+¶%squid:RedundantThrowsDeclarationCheck‚"xRemove the declaration of thrown exception 'com.nieyue.exception.VerifyCodeErrorException' which is a runtime exception.(¡ëõÿÿÿÿÿ8”€£Š½-
+osquid:CommentedOutCodeLine´"<This block of commented-out lines of code should be removed.(Œªš‹ıÿÿÿÿ8”€£Š½-
+gsquid:CallToDeprecatedMethod&"3Remove this use of "description"; it is deprecated.(èğ»úÿÿÿÿ8ÁğÊˆ½-
+Msquid:S2140³")Use "java.util.Random.nextInt()" instead.(Ï¨àşÿÿÿÿ8”€£Š½-
+zsquid:S2159¥"VRemove this call to "equals"; comparisons between unrelated types always return false.(èğ×ğøÿÿÿÿ8”€£Š½-
+isquid:CommentedOutCodeLineu"<This block of commented-out lines of code should be removed.(À¹×ä8ˆë¢Š½-
+¶%squid:RedundantThrowsDeclarationCheckÍ"xRemove the declaration of thrown exception 'com.nieyue.exception.VerifyCodeErrorException' which is a runtime exception.(“æ¡÷ûÿÿÿÿ8”€£Š½-
+µ%squid:RedundantThrowsDeclarationCheck‚"wRemove the declaration of thrown exception 'com.nieyue.exception.AccountIsExistException' which is a runtime exception.(¡ëõÿÿÿÿÿ8”€£Š½-
+|squid:S2293`"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ8ÁğÊˆ½-
+osquid:CommentedOutCodeLine¯"<This block of commented-out lines of code should be removed.(§µÃ½ûÿÿÿÿ8”€£Š½-
+zsquid:S2159×"VRemove this call to "equals"; comparisons between unrelated types always return false.(ˆÏ«ôıÿÿÿÿ8”€£Š½-
