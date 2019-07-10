@@ -1,6 +1,10 @@
 package com.nieyue;
 
+import com.nieyue.bean.Account;
+import com.nieyue.service.AccountService;
 import com.nieyue.service.PermissionService;
+import com.nieyue.util.DateUtil;
+import org.apache.tomcat.util.threads.ThreadPoolExecutor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -20,6 +24,11 @@ import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 @SpringBootApplication
 //@EnableRedisHttpSession
@@ -69,6 +78,8 @@ public class Application implements ApplicationListener<ApplicationReadyEvent> {
 
     @Autowired
     PermissionService permissionService;
+    @Autowired
+    AccountService accountService;
 
     /**
      * 容器初始化
@@ -79,6 +90,31 @@ public class Application implements ApplicationListener<ApplicationReadyEvent> {
 
         //初始化权限列表
         permissionService.initPermission();
+        //设定年龄定时器
+        ScheduledExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(3);
+        scheduledThreadPool.scheduleWithFixedDelay(new Runnable() {
+            @Override
+            public void run() {
+                int pageNum=1;
+                int pageSize=100;
+                while (true){
+                    List<Account> list = accountService.list(pageNum, pageSize, null, null, null);
+                    if(list.size()>0){
+                        for (int i = 0; i < list.size(); i++) {
+                            Account account = list.get(i);
+                            int age = DateUtil.getAgeByBirth(account.getBirthday());
+                            if(!account.getAge().equals(age)){
+                                account.setAge(age);
+                                accountService.update(account);
+                            }
+                        }
+                        pageNum=pageSize+pageNum;
+                    }else{
+                        break;
+                    }
+                }
 
+            }
+        },1000,5000, TimeUnit.MILLISECONDS);
     }
 }

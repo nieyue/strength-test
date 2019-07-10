@@ -49,6 +49,32 @@ const router= new Router({
           name: '标准',
           component: resolve=>require(['@/components/main/project/Standard'],resolve)
         },
+        {
+          path: 'assess/:pathParams',
+          name: '评测',
+          component: resolve=>require(['@/components/main/account/Assess'],resolve)
+        },
+        {
+          path: 'account/managerAccount',
+          name: '管理员',
+          component: resolve=>require(['@/components/main/account/ManagerAccount'],resolve),
+        },
+        {
+          path: 'account/userAccount',
+          name: '用户',
+          component: resolve=>require(['@/components/main/account/UserAccount'],resolve),
+        },
+        
+        {
+          path: 'finance/:pathParams',
+          name: '财务',
+          component: resolve=>require(['@/components/main/finance/Finance'],resolve),
+        },
+        {
+          path: 'account/selfAccount',
+          name: '个人信息',
+          component: resolve=>require(['@/components/main/account/SelfAccount'],resolve),
+        },
          {
           path: 'role/:pathParams',
           name: '角色',

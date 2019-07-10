@@ -1,8 +1,8 @@
-<!--标准管理 -->
+<!--评测管理 -->
 <template>
     <div class="body-wrap">
     <div class="body-btn-wrap">
-      <Button type='primary'  @click='add'>增加标准</Button>
+      <Button type='primary'  @click='add'>增加评测</Button>
       <div class="search-wrap">
         <Select v-model="params.projectId"  transfer class="search-wrap-input" placeholder="项目，全部">
             <Option v-for="item in projectList" :value="item.projectId" :key="item.projectId">{{ item.name }}</Option>
@@ -18,60 +18,31 @@
       </div>
     </div>
 		 <!--新增 -->
-     <Modal v-model="addStandardModel"
-           title="新增标准管理"
+     <Modal v-model="addAssessModel"
+           title="新增评测管理"
            :closable="false"
            :mask-closable="false"
            width="1000px"
     >
-      <Form ref="addStandard" :model="addStandard" :label-width="100"  label-position="right"  :rules="addStandardRules">
+      <Form ref="addAssess" :model="addAssess" :label-width="100"  label-position="right"  :rules="addAssessRules">
+          <!-- <template >
+              <div  v-for="(item,index) in addProjectList" :value="item.projectId" :key="item.projectId">
+                  <div>{{item.name}}</div>
+                  <FormItem prop="score" label="结果值:">
+                    <InputNumber :max="1000000000" :min="-9999999"  :precision='2'  v-model="item.score"></InputNumber>
+                  </FormItem>
+              </div>
+          </template> -->
         <FormItem prop="projectId" label="项目:">
-          <!-- <Select v-model="addStandard.projectId" size="large" style="width:100px">
-              <Option v-for="item in projectList" :value="item.projectId" :key="item.projectId">{{ item.name }}</Option>
-          </Select> -->
-          <RadioGroup v-model="addStandard.projectId" type="button" >
+          <RadioGroup v-model="addAssess.projectId" type="button" >
               <Radio style="margin:5px;" :label="item.projectId" 
               v-for="item in projectList" :value="item.projectId" :key="item.projectId" >
                   {{item.name}}
               </Radio>
           </RadioGroup>
         </FormItem>
-         <FormItem prop="age" label="年龄:">
-          <InputNumber :max="200" :min="0"  :precision='0' v-model="addStandard.age"></InputNumber>
-        </FormItem>
-        <FormItem prop="sex" label="性别:">
-          <!-- <Select v-model="addStandard.sex" transfer size="large" style="width:100px">
-              <Option v-for="item in sexList" :value="item.id" :key="item.id">{{ item.value }}</Option>
-          </Select> -->
-          <RadioGroup v-model="addStandard.sex" type="button" >
-              <Radio style="margin:5px;" :label="item.id" 
-              v-for="item in sexList" :value="item.id" :key="item.id" >
-                  {{item.value}}
-              </Radio>
-          </RadioGroup>
-        </FormItem>
-        <FormItem prop="rank" label="等级:">
-         <!--  <Select v-model="addStandard.rank" transfer size="large" style="width:100px">
-              <Option v-for="item in rankList" :value="item.id" :key="item.id">{{ item.value }}</Option>
-          </Select> -->
-          <RadioGroup v-model="addStandard.rank" type="button" >
-              <Radio style="margin:5px;" :label="item.id" 
-              v-for="item in rankList" :value="item.id" :key="item.id" >
-                  {{item.value}}
-              </Radio>
-          </RadioGroup>
-        </FormItem>
-        <FormItem prop="low" label="低位:">
-          <!-- <InputNumber :max="1000000000" :min="-9999999"  :precision='2'  v-model="addStandard.low"></InputNumber> -->
-          <Input   v-model="addStandard.low"></Input>
-        </FormItem>
-        <FormItem prop="high" label="高位:">
-         <!--  <InputNumber :max="1000000000" :min="-9999999"  :precision='2'  v-model="addStandard.high"></InputNumber> -->
-           <Input   v-model="addStandard.high"></Input>
-        </FormItem>
-        <FormItem prop="item" label="项:">
-          <Input type="text" v-model="addStandard.item" placeholder="项">
-          </Input>
+        <FormItem prop="score" label="结果值:">
+            <InputNumber :max="1000000000" :min="-9999999"  :precision='2'  v-model="addAssess.score"></InputNumber>
         </FormItem>
       </Form>
       <div slot='footer'>
@@ -84,58 +55,31 @@
     </Modal>
     <!--新增end -->
 		 <!--修改 -->
-     <Modal v-model="updateStandardModel"
-           title="修改标准管理"
+     <Modal v-model="updateAssessModel"
+           title="修改评测管理"
            :closable="false"
            :mask-closable="false"
            width="1000px"
     >
-      <Form ref="updateStandard" :model="updateStandard" :label-width="100" label-position="right"  :rules="updateStandardRules">
-        <FormItem prop="projectId" label="项目:">
-          <!-- <Select v-model="updateStandard.projectId" size="large" style="width:100px">
-              <Option v-for="item in projectList" :value="item.projectId" :key="item.projectId">{{ item.name }}</Option>
-          </Select> -->
-          <RadioGroup v-model="updateStandard.projectId" type="button" >
+      <Form ref="updateAssess" :model="updateAssess" :label-width="100" label-position="right"  :rules="updateAssessRules">
+        <!-- <template >
+              <div  v-for="item in updateProjectList" :value="item.projectId" :key="item.projectId">
+                  <div>{{item.name}}</div>
+                  <FormItem prop="score" label="结果值:">
+                    <InputNumber :max="1000000000" :min="-9999999"  :precision='2'  v-model="item.score"></InputNumber>
+                  </FormItem>
+              </div>
+          </template> -->
+          <FormItem prop="projectId" label="项目:">
+          <RadioGroup v-model="updateAssess.projectId" type="button" >
               <Radio style="margin:5px;" :label="item.projectId" 
               v-for="item in projectList" :value="item.projectId" :key="item.projectId" >
                   {{item.name}}
               </Radio>
           </RadioGroup>
         </FormItem>
-         <FormItem prop="age" label="年龄:">
-          <InputNumber :max="200" :min="0"  :precision='0' v-model="updateStandard.age"></InputNumber>
-        </FormItem>
-          <FormItem prop="sex" label="性别:">
-          <!-- <Select v-model="updateStandard.sex" transfer size="large" style="width:100px">
-              <Option v-for="item in sexList" :value="item.id" :key="item.id">{{ item.value }}</Option>
-          </Select> -->
-          <RadioGroup v-model="updateStandard.sex" type="button" >
-              <Radio style="margin:5px;" :label="item.id" 
-              v-for="item in sexList" :value="item.id" :key="item.id" >
-                  {{item.value}}
-              </Radio>
-          </RadioGroup>
-        </FormItem>
-        <FormItem prop="rank" label="等级:">
-          <!-- <Select v-model="updateStandard.rank" transfer size="large" style="width:100px">
-              <Option v-for="item in rankList" :value="item.id" :key="item.id">{{ item.value }}</Option>
-          </Select> -->
-          <RadioGroup v-model="updateStandard.rank" type="button" >
-              <Radio style="margin:5px;" :label="item.id" 
-              v-for="item in rankList" :value="item.id" :key="item.id" >
-                  {{item.value}}
-              </Radio>
-          </RadioGroup>
-        </FormItem>
-        <FormItem prop="low" label="低位:">
-          <InputNumber :max="1000000000" :min="-9999999"  :precision='2'  v-model="updateStandard.low"></InputNumber>
-        </FormItem>
-        <FormItem prop="high" label="高位:">
-          <InputNumber :max="1000000000" :min="-9999999"  :precision='2' v-model="updateStandard.high"></InputNumber>
-        </FormItem>
-        <FormItem prop="item" label="项:">
-          <Input type="text" v-model="updateStandard.item" placeholder="项">
-          </Input>
+        <FormItem prop="score" label="结果值:">
+            <InputNumber :max="1000000000" :min="-9999999"  :precision='2'  v-model="updateAssess.score"></InputNumber>
         </FormItem>
       </Form>
       <div slot='footer'>
@@ -147,7 +91,7 @@
       </div>
     </Modal>
     <!--修改end -->
-      <Table border height="600" :columns='standardColumns' :data='standardList' ref='table' size="small"></Table>
+      <Table border height="600" :columns='assessColumns' :data='assessList' ref='table' size="small"></Table>
         <div style='display: inline-block;float: right; margin-top:10px;'>
         <Page style='margin-right:10px;' @on-page-size-change="onPageSizeChange" show-sizer :page-size-opts='params.pageSizeOpts' :current="params.currentPage" :total='params.total' :pageSize='params.pageSize' ref='page' :show-total='true'  @on-change='selectPage' show-elevator ></Page>
       </div>
@@ -155,7 +99,7 @@
 </template>
 <script>
 export default {
-  name: 'Standard',
+  name: 'Assess',
   data () {
     return {
         params:{
@@ -197,38 +141,34 @@ export default {
         {id:3,value:'未知'},
         ],
 			//增加参数
-			addStandardModel:false,
+			addAssessModel:false,
 			addLoading:false,
-			addStandardRules: {
-                item: [
-                    {required: true, message: '项为必填项', trigger: 'blur'}
-                    ]
+			addAssessRules: {
+                 score: [
+                    {type:'number',required: true, message: '结果值为必填项', trigger: 'change'}
+                    ] 
                 },
-			addStandard:{
-           age:0,
-           sex:3,
-    		   rank:1,
-    		   low:0,
-           high:0,
-           item:"",
-           projectId:'',
+			addAssess:{
+                score:0
 			},
 			//修改参数
-			updateStandardModel:false,
+			updateAssessModel:false,
 			updateLoading:false,
-			updateStandardRules: {
-                item: [
-                    {required: true, message: '项为必填项', trigger: 'blur'}
-                    ]
+			updateAssessRules: {
+                 score: [
+                    {type:'number',required: true, message: '结果值为必填项', trigger: 'change'}
+                    ] 
                 },
-			updateStandard:{
+			updateAssess:{
       },
       //删除参数
-      deleteStandard:{},
+      deleteAssess:{},
       //列表
+	    addProjectList: [],
+	    updateProjectList: [],
 	    projectList: [],
-      standardList: [],
-	    standardColumns: [
+        assessList: [],
+	    assessColumns: [
         // {
         //   type: 'selection',
         //   width: 60,
@@ -243,8 +183,8 @@ export default {
           }
         },
         {
-          title: '标准id',
-          key: 'standardId',
+          title: '评测id',
+          key: 'assessId',
           align:'center'
         },
         {
@@ -287,12 +227,9 @@ export default {
           }
         },
         {
-        	title:'低高位',
-        //	key:'title',
-          align:'center',
-          render:(h,params)=>{
-            return h('span',params.row.low+'~'+params.row.high);
-          }
+        	title:'结果值',
+        	key:'score',
+          align:'center'
         },
         {
         	title:'项',
@@ -311,7 +248,7 @@ export default {
           sortable: true,
           align:'center'
         },
-				{
+		{
           title: '操作',
           key: 'action',
           align:'center',
@@ -369,6 +306,7 @@ export default {
        //构造path
      let pp=JSON.stringify({
        currentPage:currentPage,
+       accountId:JSON.parse(this.$route.params.pathParams).accountId,
      })
       this.$router.push(this.$route.path.substr(0,this.$route.path.indexOf(this.$route.params.pathParams))+pp);
       this.getList()
@@ -392,6 +330,8 @@ export default {
        listUrl:'/project/list',
        data:'projectList',
        success:()=>{
+           this.addProjectList=JSON.parse(JSON.stringify(this.projectList))
+           this.updateProjectList=JSON.parse(JSON.stringify(this.projectList))
            this.params.pageSize=10;
            this.selectPage(JSON.parse(this.$route.params.pathParams).currentPage)
            this.params.age?'':this.params.age=null;
@@ -409,10 +349,11 @@ export default {
      * p.data 返回列表
      */
       this.params.pageSize=pageSize||this.params.pageSize
+      this.params.accountId=JSON.parse(this.$route.params.pathParams).accountId
      this.axiosbusiness.getList(this,{
-       countUrl:'/standard/count',
-       listUrl:'/standard/list',
-       data:'standardList',
+       countUrl:'/assess/count',
+       listUrl:'/assess/list',
+       data:'assessList',
        success:()=>{
          this.params.age?'':this.params.age=null;
        }
@@ -420,14 +361,14 @@ export default {
     },
   //增加
 	 add (params) {
-      this.addStandardModel = true
-      this.addStandard.projectId=this.projectList.length>0?this.projectList[0].projectId:null
+      this.addAssessModel = true
+      this.addAssess.projectId=this.projectList.length>0?this.projectList[0].projectId:null
     },
 		//增加取消
 		 addCancel () {
       if (!this.addLoading) {
-        this.addStandardModel = false
-        this.$refs.addStandard.resetFields()
+        this.addAssessModel = false
+        this.$refs.addAssess.resetFields()
       }
     },
 		//增加确定
@@ -441,29 +382,30 @@ export default {
      * p.loading loading
      * p.showModel 界面模型显示隐藏
      */
+    this.addAssess.accountId=JSON.parse(this.$route.params.pathParams).accountId
     this.axiosbusiness.add(this,{
-      ref:'addStandard',
-      url:'/standard/add',
-      requestObject:'addStandard',
+      ref:'addAssess',
+      url:'/assess/add',
+      requestObject:'addAssess',
       loading:'addLoading',
-      showModel:'addStandardModel'
+      showModel:'addAssessModel'
     })
     },
 	 update (params) {
-      this.updateStandardModel = true
-      this.updateStandard.standardId = params.standardId
-      this.updateStandard.projectId = params.projectId
+      this.updateAssessModel = true
+      this.updateAssess.assessId = params.assessId
+      this.updateAssess.projectId = params.projectId
        //获取修改实体
       this.axiosbusiness.get(this,{
-         url:'/standard/load?standardId='+params.standardId,
-         data:'updateStandard',
+         url:'/assess/load?assessId='+params.assessId,
+         data:'updateAssess',
          })
     },
 		//修改取消
 		 updateCancel () {
       if (!this.updateLoading) {
-        this.updateStandardModel = false
-        this.$refs.updateStandard.resetFields()
+        this.updateAssessModel = false
+        this.$refs.updateAssess.resetFields()
       }
     },
 		//修改确定
@@ -477,13 +419,14 @@ export default {
      * p.loading loading
      * p.showModel 界面模型显示隐藏
      */
-    delete this.updateStandard.project
+    delete this.updateAssess.project
+    delete this.updateAssess.account
     this.axiosbusiness.update(this,{
-      ref:'updateStandard',
-      url:'/standard/update',
-      requestObject:'updateStandard',
+      ref:'updateAssess',
+      url:'/assess/update',
+      requestObject:'updateAssess',
       loading:'updateLoading',
-      showModel:'updateStandardModel'
+      showModel:'updateAssessModel'
     })
  
     },
@@ -495,12 +438,12 @@ export default {
      * p.url 修改url
      * p.requestObject 请求参数对象
      */
-    this.deleteStandard={
-      "standardId":params.standardId
+    this.deleteAssess={
+      "assessId":params.assessId
     };
     this.axiosbusiness.delete(this,{
-      url:'/standard/delete',
-      requestObject:'deleteStandard'
+      url:'/assess/delete',
+      requestObject:'deleteAssess'
     })
     }
   },

@@ -44,7 +44,7 @@
                         <span>用户</span>
                     </MenuItem>
                 </Submenu>
-                  <Submenu name="finance">
+              <!--     <Submenu name="finance">
                     <template slot="title">
                         <Icon type="logo-yen" />
                         <span>财务管理</span>
@@ -53,7 +53,7 @@
                         <Icon type="logo-yen" />
                         <span>财务</span>
                     </MenuItem> 
-                </Submenu>
+                </Submenu> -->
                 <Submenu v-if="isSuperAdmin" name="managerAccount">
                     <template slot="title">
                         <Icon type="md-people" />

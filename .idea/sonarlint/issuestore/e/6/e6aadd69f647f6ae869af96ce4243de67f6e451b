@@ -1,15 +1,15 @@
 
-csquid:CommentedOutCodeLineí"<This block of commented-out lines of code should be removed.(Ñ˜‘
-hsquid:CommentedOutCodeLine’"<This block of commented-out lines of code should be removed.(¬±©¬úÿÿÿÿ
-csquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‚İÜ€
-gsquid:CommentedOutCodeLinea"<This block of commented-out lines of code should be removed.(Ğø³Êûÿÿÿÿ
-jsquid:S3776Í"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(¿”““
-vsquid:S2293‡"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ
-Gsquid:S1066ÿ"/Merge this if statement with the enclosing one.(‰ÛÅ²
-esquid:S1192R"IDefine a constant instead of duplicating this literal "loginMap" 5 times.(á°¤¿üÿÿÿÿ
-csquid:CommentedOutCodeLineá"<This block of commented-out lines of code should be removed.(…µÙø
-Esquid:S1125"(Remove the literal "true" boolean value.(ÈÂ†®üÿÿÿÿ
-Lsquid:S1066º"/Merge this if statement with the enclosing one.(’ç‹±ıÿÿÿÿ
 nsquid:S1192‡"QDefine a constant instead of duplicating this literal "verificationCode" 3 times.(Éë…ÿÿÿÿÿ
+csquid:CommentedOutCodeLineí"<This block of commented-out lines of code should be removed.(Ñ˜‘
 hsquid:CommentedOutCodeLine²"<This block of commented-out lines of code should be removed.(¬±©¬úÿÿÿÿ
 Vsquid:S1155‹">Use isEmpty() to check whether the collection is empty or not.(ğÆøô
+csquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‚İÜ€
+Lsquid:S1066º"/Merge this if statement with the enclosing one.(’ç‹±ıÿÿÿÿ
+jsquid:S3776Í"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(¿”““
+Gsquid:S1066ÿ"/Merge this if statement with the enclosing one.(‰ÛÅ²
+esquid:S1192R"IDefine a constant instead of duplicating this literal "loginMap" 5 times.(á°¤¿üÿÿÿÿ
+vsquid:S2293‡"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ
+csquid:CommentedOutCodeLineá"<This block of commented-out lines of code should be removed.(…µÙø
+hsquid:CommentedOutCodeLine’"<This block of commented-out lines of code should be removed.(¬±©¬úÿÿÿÿ
+Esquid:S1125"(Remove the literal "true" boolean value.(ÈÂ†®üÿÿÿÿ
+gsquid:CommentedOutCodeLinea"<This block of commented-out lines of code should be removed.(Ğø³Êûÿÿÿÿ

@@ -1,10 +1,10 @@
 
-bsquid:CommentedOutCodeLine1"<This block of commented-out lines of code should be removed.(§Ã£¢
-gsquid:CommentedOutCodeLineS"<This block of commented-out lines of code should be removed.(îµâÁ˘ˇˇˇˇ
-Nsquid:S1481h"+Remove this unused "config" local variable.(Õ◊ûöˇˇˇˇˇ8÷§ÙàΩ-
-nsquid:CommentedOutCodeLines"<This block of commented-out lines of code should be removed.(‹Íç˚ˇˇˇˇ8∫–ÃàΩ-
-]squid:S1854h":Remove this useless assignment to local variable "config".(Õ◊ûöˇˇˇˇˇ8÷§ÙàΩ-
-Usquid:S1155=">Use isEmpty() to check whether the collection is empty or not.(‘—íÅ
 nsquid:CommentedOutCodeLine#"<This block of commented-out lines of code should be removed.(Œ∏˚≤¯ˇˇˇˇ8ø˛ÃàΩ-
+gsquid:CommentedOutCodeLineS"<This block of commented-out lines of code should be removed.(îµâÁ˘ˇˇˇˇ
+nsquid:CommentedOutCodeLines"<This block of commented-out lines of code should be removed.(‹Íç˚ˇˇˇˇ8∫–ÃàΩ-
+Nsquid:S1481h"+Remove this unused "config" local variable.(Õ◊ûöˇˇˇˇˇ8÷§ÙàΩ-
 isquid:CommentedOutCodeLinei"<This block of commented-out lines of code should be removed.(Íú≥ﬁ8÷§ÙàΩ-
+Usquid:S1155=">Use isEmpty() to check whether the collection is empty or not.(‘—íÅ
 Usquid:S1155g">Use isEmpty() to check whether the collection is empty or not.(àÄ®Ω
+bsquid:CommentedOutCodeLine1"<This block of commented-out lines of code should be removed.(§Ã£¢
+]squid:S1854h":Remove this useless assignment to local variable "config".(Õ◊ûöˇˇˇˇˇ8÷§ÙàΩ-

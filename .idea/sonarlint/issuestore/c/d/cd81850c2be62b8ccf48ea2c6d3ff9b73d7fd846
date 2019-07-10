@@ -1,21 +1,21 @@
 
-hsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ğ®’¨øÿÿÿÿ
-P
-squid:S106"9Replace this use of System.out or System.err by a logger.(­½¥¸
-[squid:CallToDeprecatedMethod%"3Remove this use of "description"; it is deprecated.(Ì¢Ñ™
-csquid:CommentedOutCodeLine£"<This block of commented-out lines of code should be removed.(®Ğˆé
+dsquid:S00112X"FDefine and throw a dedicated exception instead of using a generic one.(À’>8â’Õˆ½-
+2squid:S3626H"Remove this redundant jump.(ûÁİ…
+osquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰¢Ò€üÿÿÿÿ
 4squid:S1643·"Use a StringBuilder instead.(©³–à
-qsquid:S2293„"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÕÓëÆ
-ksquid:S00112³"FDefine and throw a dedicated exception instead of using a generic one.(»ÃÑ³øÿÿÿÿ8â’Õˆ½-
+hsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ğ®’¨øÿÿÿÿ
+csquid:CommentedOutCodeLine£"<This block of commented-out lines of code should be removed.(®Ğˆé
 U
 squid:S106œ"9Replace this use of System.out or System.err by a logger.(©ÛŸ±ûÿÿÿÿ
-osquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰¢Ò€üÿÿÿÿ
-U
-squid:S106›"9Replace this use of System.out or System.err by a logger.(€÷Ã‡ùÿÿÿÿ
 U
 squid:S106"9Replace this use of System.out or System.err by a logger.(êíÕøÿÿÿÿ
-dsquid:S00112X"FDefine and throw a dedicated exception instead of using a generic one.(À’>8â’Õˆ½-
->squid:S1659µ"&Declare "wholeStr" on a separate line.(„»Ú
-2squid:S3626H"Remove this redundant jump.(ûÁİ…
-nsquid:S00117n"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰¢Ò€üÿÿÿÿ
+U
+squid:S106›"9Replace this use of System.out or System.err by a logger.(€÷Ã‡ùÿÿÿÿ
 2squid:S3626Z"Remove this redundant jump.(ûÁİ…
+[squid:CallToDeprecatedMethod%"3Remove this use of "description"; it is deprecated.(Ì¢Ñ™
+ksquid:S00112³"FDefine and throw a dedicated exception instead of using a generic one.(»ÃÑ³øÿÿÿÿ8â’Õˆ½-
+nsquid:S00117n"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰¢Ò€üÿÿÿÿ
+qsquid:S2293„"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÕÓëÆ
+P
+squid:S106"9Replace this use of System.out or System.err by a logger.(­½¥¸
+>squid:S1659µ"&Declare "wholeStr" on a separate line.(„»Ú

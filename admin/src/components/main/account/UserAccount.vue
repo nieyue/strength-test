@@ -9,12 +9,12 @@
             <Option v-for="item in roleList" :value="item.roleId" :key="item.roleId">{{ item.name }}</Option>
         </Select> -->
         <Input v-model="params.realname" class="search-wrap-input" placeholder="真实姓名"></Input>
-        <Input v-model="params.masterId" class="search-wrap-input" placeholder="上级账户ID，查询下级账户"></Input>
+        <!-- <Input v-model="params.masterId" class="search-wrap-input" placeholder="上级账户ID，查询下级账户"></Input>
         <DatePicker type="date" placeholder="查询日期"  format="yyyy-MM-dd"
             @on-change="getParamsCreateDate" style="width: 150px" ></DatePicker>
         <Select v-model="params.auth" transfer class="search-wrap-input"  placeholder="认证，全部">
             <Option v-for="item in authParamsList" :value="item.id" :key="item.id">{{ item.value }}</Option>
-        </Select>
+        </Select> -->
         <Select v-model="params.status" transfer class="search-wrap-input"  placeholder="状态，全部">
             <Option v-for="item in statusParamsList" :value="item.id" :key="item.id">{{ item.value }}</Option>
         </Select>
@@ -527,6 +527,28 @@ export default {
                   }
                 }
               }, '收货信息');
+               var varhh32=  h('Button', {
+                props: {
+                  type: 'info',
+                  ghost:'',
+                  size: 'small'
+                },
+                style: {
+                  margin: marginstyle
+                },
+                on: {
+                  click: () => {
+                      let  pp=JSON.stringify({
+                      currentPage:1,//当前页
+                      accountId:params.row.accountId,
+                    });
+                    this.$router.push('/main/assess/'+pp);
+                    setTimeout(()=>{
+                        this.Hub.$emit('navroad',this.$router.currentRoute); //Hub触发事件
+                    },200)
+                  }
+                }
+              }, '测评');
               var s=h("div","");
     
           if( this.business.getIsSuperAdmin()){
@@ -541,7 +563,7 @@ export default {
                         ]),
                         h("div",[
                          // varhh31,
-                          //varhh32,
+                          varhh32,
                         ]),
                       
                       ]);
@@ -553,7 +575,7 @@ export default {
                         ]),
                         h("div",[
                           //varhh31,
-                          //varhh32,
+                          varhh32,
                         ]),
                       
                       ]);

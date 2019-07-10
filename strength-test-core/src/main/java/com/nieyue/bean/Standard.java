@@ -36,6 +36,11 @@ public class Standard implements Serializable{
     @ApiModelProperty(value="年龄")
     private Integer age;
     /**
+     * 性别，为1男性，为2女性,默认为3未知
+     */
+    @ApiModelProperty(value="性别，为1男性，为2女性,默认为3未知")
+    private Integer sex;
+    /**
      * 等级,1不良,2未达,3合格,4良好,5优秀
      */
     @ApiModelProperty(value="等级,1不良,2未达,3合格,4良好,5优秀")

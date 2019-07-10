@@ -49,27 +49,30 @@ public class AssessController extends BaseController<Assess,Long> {
 	@ApiOperation(value = "测评列表", notes = "测评分页浏览")
 	@ApiImplicitParams({
 	  @ApiImplicitParam(name="age",value="年龄",dataType="int", paramType = "query"),
+	  @ApiImplicitParam(name="sex",value="性别，为1男性，为2女性,默认为3未知",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="rank",value="等级,1不良,2未达,3合格,4良好,5优秀",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="projectId",value="项目id外键",dataType="long", paramType = "query"),
 	  @ApiImplicitParam(name="accountId",value="账户id外键",dataType="long", paramType = "query"),
 	  @ApiImplicitParam(name="pageNum",value="页头数位",dataType="int", paramType = "query",defaultValue="1"),
 	  @ApiImplicitParam(name="pageSize",value="每页数目",dataType="int", paramType = "query",defaultValue="10"),
-	  @ApiImplicitParam(name="orderName",value="排序字段",dataType="string", paramType = "query",defaultValue="updateDate"),
+	  @ApiImplicitParam(name="orderName",value="排序字段",dataType="string", paramType = "query",defaultValue="createDate"),
 	  @ApiImplicitParam(name="orderWay",value="排序方式",dataType="string", paramType = "query",defaultValue="desc")
 	  })
 	@RequestMapping(value = "/list", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList<List<Assess>> list(
 			@RequestParam(value="age",required=false)Integer age,
+			@RequestParam(value="sex",required=false)Integer sex,
 			@RequestParam(value="rank",required=false)Integer rank,
 			@RequestParam(value="projectId",required=false)Long projectId,
 			@RequestParam(value="accountId",required=false)Long accountId,
 			@RequestParam(value="pageNum",defaultValue="1",required=false)int pageNum,
 			@RequestParam(value="pageSize",defaultValue="10",required=false) int pageSize,
-			@RequestParam(value="orderName",required=false,defaultValue="updateDate") String orderName,
+			@RequestParam(value="orderName",required=false,defaultValue="createDate") String orderName,
 			@RequestParam(value="orderWay",required=false,defaultValue="desc") String orderWay)  {
 			Wrapper<Assess> wrapper=new EntityWrapper<>();
 			Map<String,Object> map=new HashMap<String,Object>();
 			map.put("age", age);
+			map.put("sex", sex);
 			map.put("rank", rank);
 			map.put("project_id", projectId);
 			map.put("account_id", accountId);
@@ -100,10 +103,12 @@ public class AssessController extends BaseController<Assess,Long> {
 	 */
 	@ApiOperation(value = "测评增加", notes = "测评增加")
 	@RequestMapping(value = "/add", method = {RequestMethod.GET,RequestMethod.POST})
-	public @ResponseBody StateResultList<List<Assess>> add(@ModelAttribute Assess Assess, HttpSession session) {
-		Assess.setCreateDate(new Date());
-		Assess.setUpdateDate(new Date());
-		StateResultList<List<Assess>> a = super.add(Assess);
+	public @ResponseBody StateResultList<List<Assess>> add(@ModelAttribute Assess assess, HttpSession session) {
+		assess.setCreateDate(new Date());
+		assess.setUpdateDate(new Date());
+		Account account = accountService.load(assess.getAccountId());
+		assess.setAge(account.getAge());
+		StateResultList<List<Assess>> a = super.add(assess);
 		return a;
 	}
 	/**
@@ -126,6 +131,7 @@ public class AssessController extends BaseController<Assess,Long> {
 	@ApiOperation(value = "测评数量", notes = "测评数量查询")
 	@ApiImplicitParams({
 			@ApiImplicitParam(name="age",value="年龄",dataType="int", paramType = "query"),
+			@ApiImplicitParam(name="sex",value="性别，为1男性，为2女性,默认为3未知",dataType="int", paramType = "query"),
 			@ApiImplicitParam(name="rank",value="等级,1不良,2未达,3合格,4良好,5优秀",dataType="int", paramType = "query"),
 			@ApiImplicitParam(name="projectId",value="项目id外键",dataType="long", paramType = "query"),
 			@ApiImplicitParam(name="accountId",value="项目id外键",dataType="long", paramType = "query"),
@@ -133,6 +139,7 @@ public class AssessController extends BaseController<Assess,Long> {
 	@RequestMapping(value = "/count", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList<List<Integer>> count(
 			@RequestParam(value="age",required=false)Integer age,
+			@RequestParam(value="sex",required=false)Integer sex,
 			@RequestParam(value="rank",required=false)Integer rank,
 			@RequestParam(value="projectId",required=false)Long projectId,
 			@RequestParam(value="accountId",required=false)Long accountId,
@@ -140,6 +147,7 @@ public class AssessController extends BaseController<Assess,Long> {
 		Wrapper<Assess> wrapper=new EntityWrapper<>();
 		Map<String,Object> map=new HashMap<String,Object>();
 		map.put("age", age);
+		map.put("sex", sex);
 		map.put("rank", rank);
 		map.put("project_id", projectId);
 		map.put("account_id", accountId);

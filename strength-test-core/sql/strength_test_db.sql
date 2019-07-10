@@ -113,6 +113,7 @@ PRIMARY KEY (project_id)
 CREATE TABLE standard_tb(
 standard_id bigint(20) NOT NULL AUTO_INCREMENT COMMENT '标准id',
 age int(11) COMMENT '年龄',
+sex tinyint(4) DEFAULT 3 COMMENT '性别，为1男性，为2女性,默认为3未知',
 rank tinyint(4) COMMENT '等级,1不良,2未达,3合格,4良好,5优秀',
 low double(11,2) COMMENT '低位',
 high double(11,2) COMMENT '高位',
@@ -122,6 +123,7 @@ update_date datetime COMMENT '更新时间',
 project_id bigint(20) COMMENT '项目id外键',
 PRIMARY KEY (standard_id),
 INDEX INDEX_AGE (age) USING BTREE,
+INDEX INDEX_SEX (sex) USING BTREE,
 INDEX INDEX_RANK (rank) USING BTREE,
 INDEX INDEX_PROJECTID (project_id) USING BTREE
 )ENGINE = InnoDB  DEFAULT CHARSET=utf8 COMMENT='标准表';
@@ -130,6 +132,7 @@ INDEX INDEX_PROJECTID (project_id) USING BTREE
 CREATE TABLE assess_tb(
 assess_id bigint(20) NOT NULL AUTO_INCREMENT COMMENT '测评id',
 age int(11) COMMENT '年龄',
+sex tinyint(4) DEFAULT 3 COMMENT '性别，为1男性，为2女性,默认为3未知',
 rank tinyint(4) COMMENT '等级,1不良,2未达,3合格,4良好,5优秀',
 score double(11,2) COMMENT '结果值',
 item varchar(255) COMMENT '项',
@@ -139,6 +142,7 @@ project_id bigint(20) COMMENT '项目id外键',
 account_id bigint(20) COMMENT '账户id外键',
 PRIMARY KEY (assess_id),
 INDEX INDEX_AGE (age) USING BTREE,
+INDEX INDEX_SEX (sex) USING BTREE,
 INDEX INDEX_RANK (rank) USING BTREE,
 INDEX INDEX_PROJECTID (project_id) USING BTREE,
 INDEX INDEX_ACCOUNTID (account_id) USING BTREE

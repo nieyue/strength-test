@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.nieyue.bean.Project;
 import com.nieyue.bean.Standard;
+import com.nieyue.exception.CommonRollbackException;
 import com.nieyue.service.ProjectService;
 import com.nieyue.service.StandardService;
 import com.nieyue.util.MyDom4jUtil;
@@ -45,25 +46,28 @@ public class StandardController extends BaseController<Standard,Long> {
 	@ApiOperation(value = "标准列表", notes = "标准分页浏览")
 	@ApiImplicitParams({
 	  @ApiImplicitParam(name="age",value="年龄",dataType="int", paramType = "query"),
+	  @ApiImplicitParam(name="sex",value="性别，为1男性，为2女性,默认为3未知",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="rank",value="等级,1不良,2未达,3合格,4良好,5优秀",dataType="int", paramType = "query"),
 	  @ApiImplicitParam(name="projectId",value="项目id外键",dataType="long", paramType = "query"),
 	  @ApiImplicitParam(name="pageNum",value="页头数位",dataType="int", paramType = "query",defaultValue="1"),
 	  @ApiImplicitParam(name="pageSize",value="每页数目",dataType="int", paramType = "query",defaultValue="10"),
-	  @ApiImplicitParam(name="orderName",value="排序字段",dataType="string", paramType = "query",defaultValue="updateDate"),
+	  @ApiImplicitParam(name="orderName",value="排序字段",dataType="string", paramType = "query",defaultValue="createDate"),
 	  @ApiImplicitParam(name="orderWay",value="排序方式",dataType="string", paramType = "query",defaultValue="desc")
 	  })
 	@RequestMapping(value = "/list", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList<List<Standard>> list(
 			@RequestParam(value="age",required=false)Integer age,
+			@RequestParam(value="sex",required=false)Integer sex,
 			@RequestParam(value="rank",required=false)Integer rank,
 			@RequestParam(value="projectId",required=false)Long projectId,
 			@RequestParam(value="pageNum",defaultValue="1",required=false)int pageNum,
 			@RequestParam(value="pageSize",defaultValue="10",required=false) int pageSize,
-			@RequestParam(value="orderName",required=false,defaultValue="updateDate") String orderName,
+			@RequestParam(value="orderName",required=false,defaultValue="createDate") String orderName,
 			@RequestParam(value="orderWay",required=false,defaultValue="desc") String orderWay)  {
 			Wrapper<Standard> wrapper=new EntityWrapper<>();
 			Map<String,Object> map=new HashMap<String,Object>();
 			map.put("age", age);
+			map.put("sex", sex);
 			map.put("rank", rank);
 			map.put("project_id", projectId);
 			wrapper.allEq(MyDom4jUtil.getNoNullMap(map));
@@ -82,6 +86,22 @@ public class StandardController extends BaseController<Standard,Long> {
 	@RequestMapping(value = "/update", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList<List<Standard>> update(@ModelAttribute Standard standard,HttpSession session)  {
 		standard.setUpdateDate(new Date());
+		Standard oldS = standardService.load(standard.getStandardId());
+		Wrapper<Standard> wrapper=new EntityWrapper<>();
+		Map<String,Object> map=new HashMap<String,Object>();
+		map.put("age", standard.getAge());
+		map.put("sex", standard.getSex());
+		map.put("rank", standard.getRank());
+		map.put("project_id", standard.getProjectId());
+		wrapper.allEq(MyDom4jUtil.getNoNullMap(map));
+		List<Standard> sl = standardService.simplelist(wrapper);
+		if(sl.size()>0){
+			//如果已经存在，且不是原来的，就抛异常
+			Standard sta = sl.get(0);
+			if(!oldS.getStandardId().equals(sta.getStandardId())){
+				throw new CommonRollbackException("标准已经存在");
+			}
+		}
 		StateResultList<List<Standard>> u = super.update(standard);
 		return u;
 	}
@@ -94,6 +114,17 @@ public class StandardController extends BaseController<Standard,Long> {
 	public @ResponseBody StateResultList<List<Standard>> add(@ModelAttribute Standard standard, HttpSession session) {
 		standard.setCreateDate(new Date());
 		standard.setUpdateDate(new Date());
+		Wrapper<Standard> wrapper=new EntityWrapper<>();
+		Map<String,Object> map=new HashMap<String,Object>();
+		map.put("age", standard.getAge());
+		map.put("sex", standard.getSex());
+		map.put("rank", standard.getRank());
+		map.put("project_id", standard.getProjectId());
+		wrapper.allEq(MyDom4jUtil.getNoNullMap(map));
+		List<Standard> sl = standardService.simplelist(wrapper);
+		if(sl.size()>0){
+			throw new CommonRollbackException("标准已经存在");
+		}
 		StateResultList<List<Standard>> a = super.add(standard);
 		return a;
 	}
@@ -117,18 +148,21 @@ public class StandardController extends BaseController<Standard,Long> {
 	@ApiOperation(value = "标准数量", notes = "标准数量查询")
 	@ApiImplicitParams({
 			@ApiImplicitParam(name="age",value="年龄",dataType="int", paramType = "query"),
+			@ApiImplicitParam(name="sex",value="性别，为1男性，为2女性,默认为3未知",dataType="int", paramType = "query"),
 			@ApiImplicitParam(name="rank",value="等级,1不良,2未达,3合格,4良好,5优秀",dataType="int", paramType = "query"),
 			@ApiImplicitParam(name="projectId",value="项目id外键",dataType="long", paramType = "query"),
 	})
 	@RequestMapping(value = "/count", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList<List<Integer>> count(
 			@RequestParam(value="age",required=false)Integer age,
+			@RequestParam(value="sex",required=false)Integer sex,
 			@RequestParam(value="rank",required=false)Integer rank,
 			@RequestParam(value="projectId",required=false)Long projectId,
 			HttpSession session)  {
 		Wrapper<Standard> wrapper=new EntityWrapper<>();
 		Map<String,Object> map=new HashMap<String,Object>();
 		map.put("age", age);
+		map.put("sex", sex);
 		map.put("rank", rank);
 		map.put("project_id", projectId);
 		wrapper.allEq(MyDom4jUtil.getNoNullMap(map));

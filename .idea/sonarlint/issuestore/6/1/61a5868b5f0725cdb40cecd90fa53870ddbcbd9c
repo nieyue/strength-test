@@ -1,70 +1,70 @@
 
-csquid:CommentedOutCodeLineÿ"<This block of commented-out lines of code should be removed.(¯·—õ
-U
-squid:S106ã"9Replace this use of System.out or System.err by a logger.(…é’Êûÿÿÿÿ
-osquid:S00117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Öþ÷øÿÿÿÿ
-Zsquid:CallToDeprecatedMethodò",Remove this use of "Date"; it is deprecated.(ƒØéäüÿÿÿÿ
-_squid:CallToDeprecatedMethodƒ"6Remove this use of "toLocaleString"; it is deprecated.(…ä×
-zsquid:S2234ô"bParameters to getSeparatedTime have the same names but not the same order as the method arguments.(´¢˜¶
-hsquid:CommentedOutCodeLineÞ"<This block of commented-out lines of code should be removed.(Î…Ï…ùÿÿÿÿ
+dsquid:CallToDeprecatedMethodï"6Remove this use of "toLocaleString"; it is deprecated.(å×ª¸üÿÿÿÿ
 P
-squid:S106ô"9Replace this use of System.out or System.err by a logger.(´¢˜¶
-O
-squid:S106ñ"9Replace this use of System.out or System.err by a logger.(­±šE
-hsquid:CommentedOutCodeLineë"<This block of commented-out lines of code should be removed.(‚ÓëŒÿÿÿÿÿ
+squid:S106‰"9Replace this use of System.out or System.err by a logger.( ÄÇÿ
 Osquid:S1135û"2Complete the task associated to this TODO comment.(ÕÌ®þÿÿÿÿ
-O
-squid:S106„"9Replace this use of System.out or System.err by a logger.(ª÷á
-hsquid:CommentedOutCodeLineâ"<This block of commented-out lines of code should be removed.(Ã×¤–ûÿÿÿÿ
 U
-squid:S106ù"9Replace this use of System.out or System.err by a logger.(Â°ü”ÿÿÿÿÿ
-]squid:CallToDeprecatedMethodG"0Remove this use of "setHours"; it is deprecated.(—ÂÞÔùÿÿÿÿ
+squid:S106‹"9Replace this use of System.out or System.err by a logger.(·ùßóýÿÿÿÿ
+]squid:S12267"AIntroduce a new variable instead of reusing the parameter "date".(”Ò‡ªúÿÿÿÿ
 @squid:S1148¿"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-Zsquid:CallToDeprecatedMethod…",Remove this use of "Date"; it is deprecated.(¼€ÆÔýÿÿÿÿ
 P
 squid:S106á"9Replace this use of System.out or System.err by a logger.(©‘íÝ
+Msquid:S2209¸"5Change this instance-reference to a static reference.(å‹è
+csquid:CommentedOutCodeLine‡"<This block of commented-out lines of code should be removed.(â…³³
 Zsquid:CallToDeprecatedMethodT"2Remove this use of "setSeconds"; it is deprecated.(«‡¥­
+P
+squid:S106ô"9Replace this use of System.out or System.err by a logger.(´¢˜¶
+_squid:CallToDeprecatedMethodH"2Remove this use of "setMinutes"; it is deprecated.(ä¹íÉþÿÿÿÿ
+Zsquid:CallToDeprecatedMethodI"2Remove this use of "setSeconds"; it is deprecated.(«‡¥­
+_squid:CallToDeprecatedMethodS"2Remove this use of "setMinutes"; it is deprecated.(ä¹íÉþÿÿÿÿ
+U
+squid:S106…"9Replace this use of System.out or System.err by a logger.(¼€ÆÔýÿÿÿÿ
+hsquid:CommentedOutCodeLineë"<This block of commented-out lines of code should be removed.(‚ÓëŒÿÿÿÿÿ
+@squid:S1148Ù"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+O
+squid:S106ñ"9Replace this use of System.out or System.err by a logger.(­±šE
+_squid:CallToDeprecatedMethodð"6Remove this use of "toLocaleString"; it is deprecated.(¸ü“
 dsquid:CallToDeprecatedMethodê"6Remove this use of "toLocaleString"; it is deprecated.(•­€ˆþÿÿÿÿ
+P
+squid:S106ƒ"9Replace this use of System.out or System.err by a logger.(…ä×
+hsquid:CommentedOutCodeLineþ"<This block of commented-out lines of code should be removed.(†ìÿÿÿÿÿ
+]squid:CallToDeprecatedMethod_"0Remove this use of "setHours"; it is deprecated.(Ñëîûÿÿÿÿ
 P
 squid:S106à"9Replace this use of System.out or System.err by a logger.(öŸäÛ
 U
-squid:S106ê"9Replace this use of System.out or System.err by a logger.(•­€ˆþÿÿÿÿ
-Usquid:CallToDeprecatedMethodó",Remove this use of "Date"; it is deprecated.(ÏÛ´
-U
 squid:S106é"9Replace this use of System.out or System.err by a logger.(“ôÅùÿÿÿÿ
 P
-squid:S106ƒ"9Replace this use of System.out or System.err by a logger.(…ä×
-O
-squid:S106æ"9Replace this use of System.out or System.err by a logger.(ß­ú@
-psquid:S1192u"TDefine a constant instead of duplicating this literal "yyyy-MM-dd HH:mm:ss" 6 times.(ÉÏÌŽúÿÿÿÿ
+squid:S106ð"9Replace this use of System.out or System.err by a logger.(¸ü“
+hsquid:CommentedOutCodeLineõ"<This block of commented-out lines of code should be removed.(†ìÿÿÿÿÿ
 U
 squid:S106‚"9Replace this use of System.out or System.err by a logger.(¡óÏ­úÿÿÿÿ
+O
+squid:S106„"9Replace this use of System.out or System.err by a logger.(ª÷á
+_squid:CallToDeprecatedMethoda"2Remove this use of "setSeconds"; it is deprecated.(‰•ÆÌÿÿÿÿÿ
+psquid:S2259ê"SA "NullPointerException" could be thrown; "getFormatCurrentTime()" can return null.(•­€ˆþÿÿÿÿ
+zsquid:S2234ô"bParameters to getSeparatedTime have the same names but not the same order as the method arguments.(´¢˜¶
+Vsquid:CallToDeprecatedMethod„".Remove this use of "getDay"; it is deprecated.(ª÷á
+Zsquid:CallToDeprecatedMethod…",Remove this use of "Date"; it is deprecated.(¼€ÆÔýÿÿÿÿ
+]squid:CallToDeprecatedMethodG"0Remove this use of "setHours"; it is deprecated.(—ÂÞÔùÿÿÿÿ
+_squid:CallToDeprecatedMethod`"2Remove this use of "setMinutes"; it is deprecated.(Œ½€ñþÿÿÿÿ
 dsquid:CallToDeprecatedMethod…"6Remove this use of "toLocaleString"; it is deprecated.(¼€ÆÔýÿÿÿÿ
 U
-squid:S106ï"9Replace this use of System.out or System.err by a logger.(å×ª¸üÿÿÿÿ
-psquid:S2259ê"SA "NullPointerException" could be thrown; "getFormatCurrentTime()" can return null.(•­€ˆþÿÿÿÿ
-@squid:S1148Ù"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-hsquid:CommentedOutCodeLineþ"<This block of commented-out lines of code should be removed.(†ìÿÿÿÿÿ
-Zsquid:CallToDeprecatedMethodI"2Remove this use of "setSeconds"; it is deprecated.(«‡¥­
+squid:S106ê"9Replace this use of System.out or System.err by a logger.(•­€ˆþÿÿÿÿ
+Usquid:CallToDeprecatedMethodó",Remove this use of "Date"; it is deprecated.(ÏÛ´
+hsquid:CommentedOutCodeLineâ"<This block of commented-out lines of code should be removed.(Ã×¤–ûÿÿÿÿ
+csquid:CommentedOutCodeLineÿ"<This block of commented-out lines of code should be removed.(¯·—õ
+_squid:CallToDeprecatedMethodƒ"6Remove this use of "toLocaleString"; it is deprecated.(…ä×
 U
-squid:S106…"9Replace this use of System.out or System.err by a logger.(¼€ÆÔýÿÿÿÿ
-@squid:S1148ü"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-U
-squid:S106‹"9Replace this use of System.out or System.err by a logger.(·ùßóýÿÿÿÿ
-P
-squid:S106ð"9Replace this use of System.out or System.err by a logger.(¸ü“
-csquid:CommentedOutCodeLine‡"<This block of commented-out lines of code should be removed.(â…³³
-P
-squid:S106‰"9Replace this use of System.out or System.err by a logger.( ÄÇÿ
-_squid:CallToDeprecatedMethoda"2Remove this use of "setSeconds"; it is deprecated.(‰•ÆÌÿÿÿÿÿ
-_squid:CallToDeprecatedMethodS"2Remove this use of "setMinutes"; it is deprecated.(ä¹íÉþÿÿÿÿ
-Vsquid:CallToDeprecatedMethod„".Remove this use of "getDay"; it is deprecated.(ª÷á
-dsquid:CallToDeprecatedMethodï"6Remove this use of "toLocaleString"; it is deprecated.(å×ª¸üÿÿÿÿ
-Msquid:S2209¸"5Change this instance-reference to a static reference.(å‹è
-_squid:CallToDeprecatedMethodH"2Remove this use of "setMinutes"; it is deprecated.(ä¹íÉþÿÿÿÿ
-_squid:CallToDeprecatedMethod`"2Remove this use of "setMinutes"; it is deprecated.(Œ½€ñþÿÿÿÿ
-_squid:CallToDeprecatedMethodð"6Remove this use of "toLocaleString"; it is deprecated.(¸ü“
-hsquid:CommentedOutCodeLineõ"<This block of commented-out lines of code should be removed.(†ìÿÿÿÿÿ
-]squid:S12267"AIntroduce a new variable instead of reusing the parameter "date".(”Ò‡ªúÿÿÿÿ
+squid:S106ã"9Replace this use of System.out or System.err by a logger.(…é’Êûÿÿÿÿ
 ]squid:CallToDeprecatedMethodR"0Remove this use of "setHours"; it is deprecated.(—ÂÞÔùÿÿÿÿ
-]squid:CallToDeprecatedMethod_"0Remove this use of "setHours"; it is deprecated.(Ñëîûÿÿÿÿ
+O
+squid:S106æ"9Replace this use of System.out or System.err by a logger.(ß­ú@
+U
+squid:S106ï"9Replace this use of System.out or System.err by a logger.(å×ª¸üÿÿÿÿ
+hsquid:CommentedOutCodeLineÞ"<This block of commented-out lines of code should be removed.(Î…Ï…ùÿÿÿÿ
+@squid:S1148ü"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+osquid:S00117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Öþ÷øÿÿÿÿ
+U
+squid:S106ù"9Replace this use of System.out or System.err by a logger.(Â°ü”ÿÿÿÿÿ
+psquid:S1192u"TDefine a constant instead of duplicating this literal "yyyy-MM-dd HH:mm:ss" 6 times.(ÉÏÌŽúÿÿÿÿ
+Zsquid:CallToDeprecatedMethodò",Remove this use of "Date"; it is deprecated.(ƒØéäüÿÿÿÿ
