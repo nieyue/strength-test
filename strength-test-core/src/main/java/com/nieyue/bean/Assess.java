@@ -9,6 +9,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 测评
@@ -46,15 +47,10 @@ public class Assess implements Serializable{
     @ApiModelProperty(value="等级,1不良,2未达,3合格,4良好,5优秀")
     private Integer rank;
     /**
-     * 结果值
+     * 总分
      */
-    @ApiModelProperty(value="结果值")
+    @ApiModelProperty(value="总分")
     private Double score;
-    /**
-     * 项
-     */
-    @ApiModelProperty(value="项")
-    private String item;
     /**
      * 创建时间
      */
@@ -66,27 +62,22 @@ public class Assess implements Serializable{
     @ApiModelProperty(value="更新时间")
     private Date updateDate;
     /**
-     * 项目id外键
-     */
-    @ApiModelProperty(value="项目id外键")
-    private Long projectId;
-    /**
      * 账户id外键
      */
     @ApiModelProperty(value="账户id外键")
     private Long accountId;
-    /**
-     * 项目
-     */
-    @ApiModelProperty(value="项目")
-    @TableField(exist = false)
-    private Project project;
     /**
      * 账户
      */
     @ApiModelProperty(value="账户")
     @TableField(exist = false)
     private Account account;
+    /**
+     * 单项测评列表
+     */
+    @ApiModelProperty(value="单项测评列表")
+    @TableField(exist = false)
+    private List<AssessProject> assessProjectList;
 
 
 }

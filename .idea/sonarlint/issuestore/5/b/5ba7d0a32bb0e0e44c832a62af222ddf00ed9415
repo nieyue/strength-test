@@ -1,5 +1,9 @@
 
-}squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ΊφΊύÿÿÿÿ8 ¨­®½-
-usquid:S00117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§εΆώÿÿÿÿ8Β”¥®½-
-|squid:S2293G"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ΊφΊύÿÿÿÿ8Β”¥®½-
-gsquid:CallToDeprecatedMethod "3Remove this use of "description"; it is deprecated.(ÿ‚ΐλÿÿÿÿÿ8Β”¥®½-
+|squid:S2293M"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ΊφΊύÿÿÿÿ8Β”¥®½-
+]squid:S1155">Use isEmpty() to check whether the collection is empty or not.(΅®½»8θέ…φ½-
+}squid:S2293Μ"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ΊφΊύÿÿÿÿ8μªόΜ½-
+gsquid:CallToDeprecatedMethod""3Remove this use of "description"; it is deprecated.(ÿ‚ΐλÿÿÿÿÿ8Β”¥®½-
+\squid:S1155u">Use isEmpty() to check whether the collection is empty or not.(΅®½»8®Ϊΐφ½-
+|squid:S2293l"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ΊφΊύÿÿÿÿ8®Ϊΐφ½-
+nsquid:S1192Q"KDefine a constant instead of duplicating this literal "project_id" 4 times.(Ώ»Τ”ϋÿÿÿÿ8θέ…φ½-
+}squid:S2293“"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ΊφΊύÿÿÿÿ8θέ…φ½-

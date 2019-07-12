@@ -1,3 +1,6 @@
 
-fsquid:S1192:"ODefine a constant instead of duplicating this literal "/home/404.html" 3 times.(çòÄ
-Dsquid:S16046"(Make this anonymous inner class a lambda(ó»İŒúÿÿÿÿ
+asquid:S1155f">Use isEmpty() to check whether the collection is empty or not.(É€°Îøÿÿÿÿ8—ÛÛÛ½-
+Fsquid:S1604_"(Make this anonymous inner class a lambda(ìáÁÔ8öÌÛ½-
+xsquid:UselessImportCheck"NRemove this unused import 'org.apache.tomcat.util.threads.ThreadPoolExecutor'.(°ûšb8÷Û²Û½-
+fsquid:S1192C"ODefine a constant instead of duplicating this literal "/home/404.html" 3 times.(çòÄ
+Dsquid:S1604?"(Make this anonymous inner class a lambda(ó»İŒúÿÿÿÿ

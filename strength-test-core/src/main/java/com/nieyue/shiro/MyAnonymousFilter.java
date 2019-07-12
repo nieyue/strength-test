@@ -25,7 +25,7 @@ public class MyAnonymousFilter extends AnonymousFilter {
 		if(request.getRequestURI().equals("/")){
 			//重定向, (请求转发不行)
 			try {
-				response.sendRedirect("/home/index.html");
+				response.sendRedirect("/admin/index.html");
 			} catch (IOException e) {
 				throw new CommonRollbackException("跳转错误");
 			}

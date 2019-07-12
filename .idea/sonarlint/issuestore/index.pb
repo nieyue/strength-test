@@ -69,3 +69,7 @@ Fstrength-test-core/src/main/java/com/nieyue/service/AssessService.java,0\0\00d
 Lstrength-test-core/src/main/java/com/nieyue/controller/AssessController.java,5\b\5ba7d0a32bb0e0e44c832a62af222ddf00ed9415
 p
 @strength-test-core/src/main/java/com/nieyue/dao/StandardDao.java,4\4\440b118e459ecbece161c39d4a56ab381bac3973
+}
+Mstrength-test-core/src/main/java/com/nieyue/service/impl/BaseServiceImpl.java,2\3\23940c2e5c3d2307a580a0b40e566e2bd7e79c1f
+q
+Astrength-test-core/src/main/resources/static/wechat/jsapi/mp.html,f\1\f10ab663ac06af00a1b5a6a3b5f93a1fd8bc2f6c

@@ -46,6 +46,14 @@ Vue.prototype.axiosbusiness=axiosbusiness
 Vue.prototype.business=business
 Vue.use(VueAxios, axios)
 Vue.use(iView)
+console.log(iView.InputNumber.computed.precisionValue)
+//重写iview InputNumber浮点方法
+iView.InputNumber.computed.precisionValue = function () {
+  let arr = (this.currentValue + '').split('.')
+  if (this.precision && arr[1] && this.precision < arr[1].length)
+    return this.currentValue.toFixed(this.precision)
+  return this.currentValue;
+};
 //注册自定义上传组件
 Vue.component("my-upload",MyUpload)
 //注册自定义编辑器

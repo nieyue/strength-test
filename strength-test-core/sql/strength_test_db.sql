@@ -134,19 +134,32 @@ assess_id bigint(20) NOT NULL AUTO_INCREMENT COMMENT '测评id',
 age int(11) COMMENT '年龄',
 sex tinyint(4) DEFAULT 3 COMMENT '性别，为1男性，为2女性,默认为3未知',
 rank tinyint(4) COMMENT '等级,1不良,2未达,3合格,4良好,5优秀',
-score double(11,2) COMMENT '结果值',
-item varchar(255) COMMENT '项',
+score double(11,2) COMMENT '总分',
 create_date datetime   COMMENT '创建时间',
 update_date datetime COMMENT '更新时间',
-project_id bigint(20) COMMENT '项目id外键',
 account_id bigint(20) COMMENT '账户id外键',
 PRIMARY KEY (assess_id),
 INDEX INDEX_AGE (age) USING BTREE,
 INDEX INDEX_SEX (sex) USING BTREE,
 INDEX INDEX_RANK (rank) USING BTREE,
-INDEX INDEX_PROJECTID (project_id) USING BTREE,
 INDEX INDEX_ACCOUNTID (account_id) USING BTREE
 )ENGINE = InnoDB  DEFAULT CHARSET=utf8 COMMENT='测评表';
+
+#创建单项测评表
+CREATE TABLE assess_project_tb(
+assess_project_id bigint(20) NOT NULL AUTO_INCREMENT COMMENT '单项测评id',
+rank tinyint(4) COMMENT '等级,1不良,2未达,3合格,4良好,5优秀',
+score double(11,2) COMMENT '分值',
+item varchar(255) COMMENT '项',
+create_date datetime   COMMENT '创建时间',
+update_date datetime COMMENT '更新时间',
+project_id bigint(20) COMMENT '项目id外键',
+assess_id bigint(20) COMMENT '测评id外键',
+PRIMARY KEY (assess_project_id),
+INDEX INDEX_RANK (rank) USING BTREE,
+INDEX INDEX_PROJECTID (project_id) USING BTREE,
+INDEX INDEX_ASSESSID (assess_id) USING BTREE
+)ENGINE = InnoDB  DEFAULT CHARSET=utf8 COMMENT='单项测评表';
 
 
 #创建配置表
