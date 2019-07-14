@@ -18,10 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 /**
@@ -83,7 +80,7 @@ public class AssessController extends BaseController<Assess,Long> {
 				map2.put("assess_id", e.getAssessId());
 				wrapper2.allEq(MyDom4jUtil.getNoNullMap(map2));
 				List<AssessProject> apl = assessProjectService.simplelist(wrapper2);
-				e.setAssessProjectList(apl);
+				e.setAssessProjectList((ArrayList<AssessProject>)apl);
 			});
 			return rl;
 	}
@@ -170,7 +167,7 @@ public class AssessController extends BaseController<Assess,Long> {
 				map2.put("assess_id", e.getAssessId());
 				wrapper2.allEq(MyDom4jUtil.getNoNullMap(map2));
 				List<AssessProject> apl = assessProjectService.simplelist(wrapper2);
-				e.setAssessProjectList(apl);
+				e.setAssessProjectList((ArrayList<AssessProject>) apl);
 			});
 		 return l;
 	}

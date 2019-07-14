@@ -1,10 +1,11 @@
 package com.nieyue;
 
+import com.fasterxml.classmate.TypeResolver;
 import com.nieyue.bean.Account;
+import com.nieyue.bean.Assess;
 import com.nieyue.service.AccountService;
 import com.nieyue.service.PermissionService;
 import com.nieyue.util.DateUtil;
-import org.apache.tomcat.util.threads.ThreadPoolExecutor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -21,6 +22,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.schema.AlternateTypeRule;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -44,6 +46,9 @@ public class Application implements ApplicationListener<ApplicationReadyEvent> {
     }
     @Bean
     public Docket createRestApi(){
+        //解决重复递归问题
+        TypeResolver typeResolver=new TypeResolver();
+        AlternateTypeRule typeRule1=new AlternateTypeRule(typeResolver.resolve(Assess.class),typeResolver.resolve(Object.class));
         String name="体能测试";
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(
@@ -52,6 +57,7 @@ public class Application implements ApplicationListener<ApplicationReadyEvent> {
                                 .description(name+"平台接口文档1.0版本")
                                 .version("1.0")
                                 .build())
+                .alternateTypeRules(typeRule1)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.nieyue.controller"))
                 .paths(PathSelectors.any())

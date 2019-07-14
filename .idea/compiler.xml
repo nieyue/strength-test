@@ -21,7 +21,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="physical-strength-test-core" />
-        <module name="strength-test" />
         <module name="strength-test-core" />
       </profile>
     </annotationProcessing>
@@ -30,5 +29,11 @@
       <module name="strength-test" target="1.8" />
       <module name="strength-test-core" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="strength-test" options="" />
+      <module name="strength-test-core" options="-parameters -extdirs E:\nieyue\IntelliJIDE\work\strength-test\strength-test-core/lib" />
+    </option>
   </component>
 </project>

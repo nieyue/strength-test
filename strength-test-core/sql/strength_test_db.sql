@@ -149,7 +149,7 @@ INDEX INDEX_ACCOUNTID (account_id) USING BTREE
 CREATE TABLE assess_project_tb(
 assess_project_id bigint(20) NOT NULL AUTO_INCREMENT COMMENT '单项测评id',
 rank tinyint(4) COMMENT '等级,1不良,2未达,3合格,4良好,5优秀',
-score double(11,2) COMMENT '分值',
+score double(11,2) COMMENT '结果值',
 item varchar(255) COMMENT '项',
 create_date datetime   COMMENT '创建时间',
 update_date datetime COMMENT '更新时间',

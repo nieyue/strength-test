@@ -40,9 +40,9 @@ public class AssessProject implements Serializable{
     @ApiModelProperty(value="等级,1不良,2未达,3合格,4良好,5优秀")
     private Integer rank;
     /**
-     * 分值
+     * 结果值
      */
-    @ApiModelProperty(value="分值")
+    @ApiModelProperty(value="结果值")
     private Double score;
     /**
      * 创建时间

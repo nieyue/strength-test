@@ -23,6 +23,11 @@ const router= new Router({
       name: '登录',
       component: resolve=>require(['@/components/Login'],resolve)
     },
+    {
+      path: '/data/:pathParams',
+      name: '报告',
+      component: resolve=>require(['@/components/Data'],resolve)
+    },
     
     {
       path: '/main',
@@ -51,8 +56,13 @@ const router= new Router({
         },
         {
           path: 'assess/:pathParams',
-          name: '评测',
-          component: resolve=>require(['@/components/main/account/Assess'],resolve)
+          name: '测评',
+          component: resolve=>require(['@/components/main/assess/Assess'],resolve)
+        },
+        {
+          path: 'assessProject/:pathParams',
+          name: '单项测评',
+          component: resolve=>require(['@/components/main/assess/AssessProject'],resolve)
         },
         {
           path: 'account/managerAccount',

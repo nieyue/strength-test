@@ -8,11 +8,27 @@ import iView from 'iview'
 import 'iview/dist/styles/iview.css';
 import Qs from 'qs'
 import wangeditor from 'wangeditor'
+import echarts from 'echarts/lib/echarts'
+//雷达
+import 'echarts/lib/chart/radar';
+// 引入折线图。
+import 'echarts/lib/chart/line';
+//柱状图
+import 'echarts/lib/chart/bar';
+//饼状图
+import 'echarts/lib/chart/pie';
+// 引入提示框组件、标题组件、工具箱组件。
+import 'echarts/lib/component/tooltip';
+import 'echarts/lib/component/title';
+import 'echarts/lib/component/toolbox';
+import 'echarts/lib/component/legend'; 
+
 import axiosbusiness from "@/components/service/axiosbusiness"
 import business from "@/components/service/business"
 import MyUpload from '@/components/common/MyUpload'
 import MyWangeditor from '@/components/common/MyWangeditor'
 import MyPhone from '@/components/common/MyPhone'
+import MyEcharts from '@/components/common/MyEcharts'
 
 Vue.config.productionTip = false
 
@@ -44,6 +60,7 @@ Vue.prototype.utils=utils
 Vue.prototype.wangeditor=wangeditor
 Vue.prototype.axiosbusiness=axiosbusiness
 Vue.prototype.business=business
+Vue.prototype.echarts=echarts
 Vue.use(VueAxios, axios)
 Vue.use(iView)
 console.log(iView.InputNumber.computed.precisionValue)
@@ -60,6 +77,8 @@ Vue.component("my-upload",MyUpload)
 Vue.component("my-wangeditor",MyWangeditor)
 //注册自定义手机组件
 Vue.component("my-phone",MyPhone)
+//注册自定义图表组件
+Vue.component("my-echarts",MyEcharts)
 //全局监听事件
 Vue.prototype.Hub = new Vue();
 

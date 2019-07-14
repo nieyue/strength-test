@@ -47,6 +47,73 @@ export default {
   let timer = year 
   return timer
 },
+  /*
+  *获取n天前(负) 、n天后（正）日期
+  */
+ getNDate(n) {
+  if(isNaN(n)){
+    n=0;
+  }
+  let ndate=new Date(new Date().getTime()+n*24*60*60*1000);
+  return ndate
+},
+/**
+ * 获取n天前(负)、n天后（正）的00:00:00的时间
+ * 
+ */
+getNDateTime(n){  
+  let date=new Date();
+  date.setHours(0);
+  date.setMinutes(0);
+  date.setSeconds(0);
+  date.setMilliseconds(0);
+  if(isNaN(n)){
+    n=0;
+  }
+  var ndate=date.getTime()+1000*60*60*24*n;
+  return new Date(ndate);
+},
+/**
+ * 获取startDate、endDate的所有日期
+ * haveTime 默认没有，
+ */
+getAllDate(startDate,endDate,haveTime){ 
+  let datearray=[]; 
+  let sd=new Date(startDate);
+  let ed=new Date(endDate);
+  sd.setHours(0);
+  sd.setMinutes(0);
+  sd.setSeconds(0);
+  sd.setMilliseconds(0);
+  
+  ed.setHours(0);
+  ed.setMinutes(0);
+  ed.setSeconds(0);
+  ed.setMilliseconds(0);
+
+  let sdt=sd.getTime();
+  let edt=ed.getTime();
+  let number=(edt-sdt)/1000/60/60/24;
+  //console.error(number)
+  if(number>=0){
+    for(let i=0;i<=number;i++){
+      if(haveTime){
+        datearray.push(this.getTime(sd.getTime()+1000*60*60*24*i))
+      }else{
+        datearray.push(this.getDay(sd.getTime()+1000*60*60*24*i))
+      }
+    }
+  }else{
+    for(let i=0;i<=Math.abs(number);i++){
+      if(haveTime){
+        datearray.push(this.getTime(ed.getTime()+1000*60*60*24*i))
+      }else{
+        datearray.push(this.getDay(ed.getTime()+1000*60*60*24*i))
+      }
+    }
+  }
+  return datearray;
+},
 /*
   *递归 把array数组递归成属性挂载在$this对象上
   *p.str='b.c.d.ee.cc.22' 字符串

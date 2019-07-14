@@ -8,8 +8,8 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 /**
  * 测评
@@ -77,7 +77,7 @@ public class Assess implements Serializable{
      */
     @ApiModelProperty(value="单项测评列表")
     @TableField(exist = false)
-    private List<AssessProject> assessProjectList;
+    private ArrayList<AssessProject> assessProjectList;
 
 
 }
