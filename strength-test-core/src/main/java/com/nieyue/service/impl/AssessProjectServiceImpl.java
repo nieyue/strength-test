@@ -58,10 +58,13 @@ public class AssessProjectServiceImpl extends BaseServiceImpl<AssessProject,Long
             //存放临时的
             for (int i = 0; i < sl.size(); i++) {
                 Standard s = sl.get(i);
+                //大于等于的就是符合要求
                 if(assessProject.getScore()>=s.getLow()){
-                    //只要是大于等于的就是符合要求
-                    standard=s;
-                    assessProject.setItem(standard.getItem());
+                    //只留最高等级的
+                    if(standard.getRank()<=s.getRank()){
+                        standard=s;
+                        assessProject.setItem(standard.getItem());
+                    }
                 }
             }
         }
@@ -100,10 +103,13 @@ public class AssessProjectServiceImpl extends BaseServiceImpl<AssessProject,Long
             //存放临时的
             for (int i = 0; i < sl.size(); i++) {
                 Standard s = sl.get(i);
+                //大于等于的就是符合要求
                 if(assessProject.getScore()>=s.getLow()){
-                    //只要是大于等于的就是符合要求
-                    standard=s;
-                    assessProject.setItem(standard.getItem());
+                    //只留最高等级的
+                    if(standard.getRank()<=s.getRank()){
+                        standard=s;
+                        assessProject.setItem(standard.getItem());
+                    }
                 }
             }
         }

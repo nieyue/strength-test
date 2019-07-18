@@ -30,16 +30,16 @@
               </div>
           </template> -->
         <FormItem prop="projectId" label="项目:">
-          <RadioGroup v-model="addAssessProject.projectId" type="button" @click="addUnitClick(item)" >
+          {{addAssessProject.projectId}}
+          <RadioGroup v-model="addAssessProject.projectId" type="button"  >
               <Radio style="margin:5px;" :label="item.projectId" 
-              v-for="item in projectList" :value="item.projectId" :key="item.projectId" >
+              v-for="item in projectList" :value="item.projectId" :key="item.projectId">
                   {{item.name}}
               </Radio>
           </RadioGroup>
         </FormItem>
         <FormItem prop="score" label="结果值:">
             <InputNumber :max="1000000000" :min="-9999999"  :precision='2'  v-model="addAssessProject.score"></InputNumber>
-             {{addUnit}}
         </FormItem>
       </Form>
       <div slot='footer'>
@@ -69,7 +69,7 @@
           </template> -->
           <FormItem prop="projectId" label="项目:">
           <RadioGroup v-model="updateAssessProject.projectId" type="button" >
-              <Radio style="margin:5px;" :label="item.projectId" @click="updateUnitClick(item)"
+              <Radio style="margin:5px;" :label="item.projectId"
               v-for="item in projectList" :value="item.projectId" :key="item.projectId" >
                   {{item.name}}
               </Radio>
@@ -427,8 +427,18 @@ export default {
     this.getProjectList();
     
   },
+  computed: {
+      addAssessProjectProjectId() {
+        return this.addAssessProject.projectId;
+      }
+    },
+  watch: {
+      addAssessProjectProjectId(val) {
+        console.log(val)
+      }
+    },
   mounted () {
-
+    
   }
 }
 </script>

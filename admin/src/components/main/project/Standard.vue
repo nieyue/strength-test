@@ -62,12 +62,12 @@
           </RadioGroup>
         </FormItem>
         <FormItem prop="low" label="低位:">
-          <!-- <InputNumber :max="1000000000" :min="-9999999"  :precision='2'  v-model="addStandard.low"></InputNumber> -->
-          <Input   v-model="addStandard.low"></Input>
+          <InputNumber :max="1000000000" :min="-9999999"  :precision='2'  v-model="addStandard.low"></InputNumber>
+         <!--  <Input   v-model="addStandard.low"></Input> -->
         </FormItem>
         <FormItem prop="high" label="高位:">
-         <!--  <InputNumber :max="1000000000" :min="-9999999"  :precision='2'  v-model="addStandard.high"></InputNumber> -->
-           <Input   v-model="addStandard.high"></Input>
+          <InputNumber :max="1000000000" :min="-9999999"  :precision='2'  v-model="addStandard.high"></InputNumber>
+           <!-- <Input   v-model="addStandard.high"></Input> -->
         </FormItem>
         <FormItem prop="item" label="项:">
           <Input type="text" v-model="addStandard.item" placeholder="项">
@@ -395,6 +395,8 @@ export default {
            this.params.pageSize=10;
            this.selectPage(JSON.parse(this.$route.params.pathParams).currentPage)
            this.params.age?'':this.params.age=null;
+           this.addStandard.projectId=this.projectList.length>0?this.projectList[0].projectId:null
+
        }
      },
     this.params)
@@ -421,7 +423,7 @@ export default {
   //增加
 	 add (params) {
       this.addStandardModel = true
-      this.addStandard.projectId=this.projectList.length>0?this.projectList[0].projectId:null
+      
     },
 		//增加取消
 		 addCancel () {

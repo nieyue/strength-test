@@ -71,5 +71,7 @@ p
 @strength-test-core/src/main/java/com/nieyue/dao/StandardDao.java,4\4\440b118e459ecbece161c39d4a56ab381bac3973
 }
 Mstrength-test-core/src/main/java/com/nieyue/service/impl/BaseServiceImpl.java,2\3\23940c2e5c3d2307a580a0b40e566e2bd7e79c1f
-q
-Astrength-test-core/src/main/resources/static/wechat/jsapi/mp.html,f\1\f10ab663ac06af00a1b5a6a3b5f93a1fd8bc2f6c
+†
+Vstrength-test-core/src/main/java/com/nieyue/service/impl/AssessProjectServiceImpl.java,5\6\562f706f24c7daa846851e3133da441758340f56
+`
+0strength-test-core/sql/strength_test_db_data.sql,d\d\dd2ac31d1debd44c043cca2d03c0ed3610589d71

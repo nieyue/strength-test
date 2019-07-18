@@ -56,7 +56,9 @@
                         <span>测量方式:</span>
                         <span>尺量</span>
                     </div>
-                    <div class="triangle-right"></div>
+                    <div class="triangle-right">
+                        <i class="fa fa-caret-right fa-2x" style="color:red;"></i>
+                    </div>
                 </div>
             </div>
             
@@ -77,7 +79,9 @@
                         <span>测量方式:</span>
                         <span>尺量</span>
                     </div>
-                    <div class="triangle-left" ></div>
+                    <div class="triangle-left" >
+                        
+                    </div>
                 </div>
             </div>
 
@@ -322,15 +326,17 @@ export default {
         setTimeout(()=>{
           html2canvas(document.getElementById('dataList'),{
               useCORS:true,
+              proxy: this.axios.defaults.baseURL,
               logging: false
           })
 .then(function(canvas) {
    // document.body.appendChild(canvas);
     var context = canvas.getContext('2d');
 
-    var img = new Image();
+   // var img = new Image();
+    var img = document.createElement("img");
     img.src = canvas.toDataURL("image/jpg")
-    img.crossOrigin = 'anonymous'
+    img.crossOrigin = 'Anonymous'
     img.id = 'poster'
 
     document.body.appendChild(img);
@@ -413,22 +419,18 @@ export default {
 
 <style >
     .triangle-right{
-        width:0;
-        height:0;
-        border-top:10px solid transparent;
+        /* border-top:10px solid transparent;
         border-bottom:10px solid transparent;
-        border-left:10px solid #fff;
+        border-left:10px solid #fff; */
         position:absolute;
         right:-10px;
         top:50%;
         margin-top:-10px;
         }
         .triangle-left{
-            width:0;
-            height:0;
-            border-top:10px solid transparent;
+            /* border-top:10px solid transparent;
             border-bottom:10px solid transparent;
-            border-right:10px solid #fff;
+            border-right:10px solid #fff; */
             position:absolute;
             left:-10px;
             top:50%;

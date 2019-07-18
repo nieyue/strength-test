@@ -124,7 +124,7 @@ export default {
                 if (res.data.code === 200) {
                     $this[p.showModel] = false
                     $this.$Message.success(res.data.msg)
-                    $this.$refs[p.ref].resetFields()
+                    //$this.$refs[p.ref].resetFields()
                     if(typeof p.success=='function'){
                         p.success();
                     }else{

@@ -33,7 +33,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="strength-test" options="" />
-      <module name="strength-test-core" options="-parameters -extdirs E:\nieyue\IntelliJIDE\work\strength-test\strength-test-core/lib" />
+      <module name="strength-test-core" options="" />
     </option>
   </component>
 </project>
