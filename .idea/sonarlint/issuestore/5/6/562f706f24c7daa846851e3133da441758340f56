@@ -1,12 +1,14 @@
 
-|squid:S2293Z"YReplace the type specification in this constructor call with the diamond operator ("<>").(öªŸûÿÿÿÿ8ë„™¿-
-\squid:S1155R">Use isEmpty() to check whether the collection is empty or not.(±ÿÕ8ë„™¿-
-|squid:S2293M"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ8ë„™¿-
-Msquid:S1066S"/Merge this if statement with the enclosing one.(á¹‡Ş8ë„™¿-
-\squid:S11559">Use isEmpty() to check whether the collection is empty or not.(¡®½»8ë„™¿-
-|squid:S2293$"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ8ë„™¿-
+|squid:S2293P"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ8ŠáÜ–À-
+Msquid:S1066V"/Merge this if statement with the enclosing one.(á¹‡Ş8ŠáÜ–À-
+|squid:S2293]"YReplace the type specification in this constructor call with the diamond operator ("<>").(öªŸûÿÿÿÿ8ŠáÜ–À-
 bsquid:UselessImportCheck"7Remove this unused import 'javax.sql.CommonDataSource'.(–¥¶Á8ë„™¿-
 \squid:S1155)">Use isEmpty() to check whether the collection is empty or not.(±ÿÕ8ë„™¿-
-|squid:S22930"YReplace the type specification in this constructor call with the diamond operator ("<>").(öªŸûÿÿÿÿ8ë„™¿-
-\squid:S1155c">Use isEmpty() to check whether the collection is empty or not.(¡®½»8›Ê…®¾-
+\squid:S1155f">Use isEmpty() to check whether the collection is empty or not.(¡®½»8‹áÜ–À-
+\squid:S1155U">Use isEmpty() to check whether the collection is empty or not.(±ÿÕ8ŠáÜ–À-
+Msquid:S1066@"/Merge this if statement with the enclosing one.(£Øö¨8ë„™¿-
+Msquid:S1066m"/Merge this if statement with the enclosing one.(£Øö¨8Î¢á–À-
+|squid:S2293$"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ8ë„™¿-
+\squid:S11559">Use isEmpty() to check whether the collection is empty or not.(¡®½»8ë„™¿-
 nsquid:S1192&"KDefine a constant instead of duplicating this literal "project_id" 4 times.(îíùŒıÿÿÿÿ8ë„™¿-
+|squid:S22930"YReplace the type specification in this constructor call with the diamond operator ("<>").(öªŸûÿÿÿÿ8ë„™¿-

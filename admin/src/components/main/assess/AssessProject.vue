@@ -30,16 +30,18 @@
               </div>
           </template> -->
         <FormItem prop="projectId" label="项目:">
-          {{addAssessProject.projectId}}
           <RadioGroup v-model="addAssessProject.projectId" type="button"  >
-              <Radio style="margin:5px;" :label="item.projectId" 
-              v-for="item in projectList" :value="item.projectId" :key="item.projectId">
+              <span @click="addUnitClick(item)"  v-for="item in projectList">
+              <Radio style="margin:5px;" :label="item.projectId"
+               :value="item.projectId" :key="item.projectId" >
                   {{item.name}}
               </Radio>
+              </span>
           </RadioGroup>
         </FormItem>
         <FormItem prop="score" label="结果值:">
             <InputNumber :max="1000000000" :min="-9999999"  :precision='2'  v-model="addAssessProject.score"></InputNumber>
+            {{addUnit}}
         </FormItem>
       </Form>
       <div slot='footer'>
@@ -69,14 +71,17 @@
           </template> -->
           <FormItem prop="projectId" label="项目:">
           <RadioGroup v-model="updateAssessProject.projectId" type="button" >
+              <span @click="updateUnitClick(item) "  v-for="item in projectList">
               <Radio style="margin:5px;" :label="item.projectId"
-              v-for="item in projectList" :value="item.projectId" :key="item.projectId" >
+               :value="item.projectId" :key="item.projectId" >
                   {{item.name}}
               </Radio>
+              </span>
           </RadioGroup>
         </FormItem>
         <FormItem prop="score" label="结果值:">
             <InputNumber :max="1000000000" :min="-9999999"  :precision='2'  v-model="updateAssessProject.score"></InputNumber>
+            {{updateUnit}}
         </FormItem>
       </Form>
       <div slot='footer'>
@@ -262,7 +267,6 @@ export default {
   },
   methods: {
     addUnitClick(item){
-      console.log(item)
       this.addUnit=item.unit
     },
     updateUnitClick(item){
@@ -368,6 +372,11 @@ export default {
     })
     },
 	 update (params) {
+     this.projectList.forEach(e=>{
+       if(e.projectId==params.projectId){
+          this.updateUnit=e.unit
+       }
+     })
       this.updateAssessProjectModel = true
       this.updateAssessProject.assessProjectId = params.assessProjectId
       this.updateAssessProject.projectId = params.projectId
@@ -425,7 +434,6 @@ export default {
   },
   created () {
     this.getProjectList();
-    
   },
   computed: {
       addAssessProjectProjectId() {

@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "echarts": "^4.2.1",
+    "html2canvas": "^1.0.0-rc.3",
     "iview": "^3.4.2",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",

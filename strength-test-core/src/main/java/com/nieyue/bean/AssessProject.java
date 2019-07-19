@@ -76,6 +76,12 @@ public class AssessProject implements Serializable{
     @ApiModelProperty(value="测评")
     @TableField(exist = false)
     private Assess assess;
+    /**
+     * 标准
+     */
+    @ApiModelProperty(value="标准")
+    @TableField(exist = false)
+    private Standard standard;
 
 
 }

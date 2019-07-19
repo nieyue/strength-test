@@ -1,8 +1,6 @@
 <!--Echarts组件 -->
 <template>
-    <div>
      <div id="myEcharts" ref="myEcharts" :style="config2.style"></div>
-    </div>
 </template>
 <script>
 export default {
@@ -32,6 +30,7 @@ export default {
     }
   },
   methods: {
+
       init(echartsId,options){
             // 基于准备好的dom，初始化echarts实例
             this.$refs.myEcharts.id=echartsId;
