@@ -2,7 +2,7 @@
 <template>
     <div class="body-wrap">
     <div class="body-btn-wrap">
-      <Button type='primary'  @click='add'>增加单项测评</Button>
+      <!-- <Button type='primary'  @click='add'>增加单项测评</Button> -->
       <div class="search-wrap">
         <Select v-model="params.projectId"  transfer class="search-wrap-input" placeholder="项目，全部">
             <Option v-for="item in projectList" :value="item.projectId" :key="item.projectId">{{ item.name }}</Option>
@@ -257,7 +257,7 @@ export default {
             	var s=h("div","");
 			s=h("div",[
               varhh1,
-              varhh2
+             // varhh2
             ]);
             return s;
           }
@@ -406,6 +406,7 @@ export default {
      */
     delete this.updateAssessProject.project
     delete this.updateAssessProject.assess
+    delete this.updateAssessProject.standard
     this.axiosbusiness.update(this,{
       ref:'updateAssessProject',
       url:'/assessProject/update',

@@ -100,7 +100,7 @@ getAllDate(startDate,endDate,haveTime){
       if(haveTime){
         datearray.push(this.getTime(sd.getTime()+1000*60*60*24*i))
       }else{
-        datearray.push(this.getDay(sd.getTime()+1000*60*60*24*i))
+        datearray.push(this.getDate(sd.getTime()+1000*60*60*24*i))
       }
     }
   }else{
@@ -108,7 +108,7 @@ getAllDate(startDate,endDate,haveTime){
       if(haveTime){
         datearray.push(this.getTime(ed.getTime()+1000*60*60*24*i))
       }else{
-        datearray.push(this.getDay(ed.getTime()+1000*60*60*24*i))
+        datearray.push(this.getDate(ed.getTime()+1000*60*60*24*i))
       }
     }
   }

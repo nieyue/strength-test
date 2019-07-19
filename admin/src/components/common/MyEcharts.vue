@@ -36,14 +36,14 @@ export default {
             this.$refs.myEcharts.id=echartsId;
         this.myEcharts = this.echarts.init(this.$refs.myEcharts);
         // 指定图表的配置项和数据
-         options=!options||options.series==null?{
+         /* options=!options||options.series==null?{
             tooltip: {},
             legend: {
                 bottom:0,
                 data:['按阅读计费','按位置计费']
             },
             xAxis: {
-                data:this.utils.getAllDate(this.utils.getDay(this.utils.getNDate(0)),this.utils.getDay(this.utils.getNDate(-6)))
+                data:this.utils.getAllDate(this.utils.getDate(this.utils.getNDate(0)),this.utils.getDate(this.utils.getNDate(-6)))
             },
             yAxis: {},
             series: [
@@ -58,7 +58,7 @@ export default {
                 data: [0, 0, 0, 0, 0, 0, 0]
                 },
             ]
-        }:options;
+        }:options; */
         // 使用刚指定的配置项和数据显示图表。
         this.myEcharts.setOption(options);
         }

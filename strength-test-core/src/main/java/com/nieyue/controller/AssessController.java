@@ -7,6 +7,7 @@ import com.nieyue.bean.Assess;
 import com.nieyue.bean.AssessProject;
 import com.nieyue.bean.Standard;
 import com.nieyue.service.*;
+import com.nieyue.util.DateUtil;
 import com.nieyue.util.MyDom4jUtil;
 import com.nieyue.util.StateResultList;
 import io.swagger.annotations.Api;
@@ -100,6 +101,7 @@ public class AssessController extends BaseController<Assess,Long> {
 			@ApiImplicitParam(name="sex",value="性别，为1男性，为2女性,默认为3未知",dataType="int", paramType = "query"),
 			@ApiImplicitParam(name="rank",value="等级,1不良,2未达,3合格,4良好,5优秀",dataType="int", paramType = "query"),
 			@ApiImplicitParam(name="accountId",value="账户id外键",dataType="long", paramType = "query"),
+			@ApiImplicitParam(name="createDate",value="创建时间",dataType="date-time", paramType = "query"),
 			@ApiImplicitParam(name="pageNum",value="页头数位",dataType="int", paramType = "query",defaultValue="1"),
 			@ApiImplicitParam(name="pageSize",value="每页数目",dataType="int", paramType = "query",defaultValue="10"),
 			@ApiImplicitParam(name="orderName",value="排序字段",dataType="string", paramType = "query",defaultValue="createDate"),
@@ -111,6 +113,7 @@ public class AssessController extends BaseController<Assess,Long> {
 			@RequestParam(value="sex",required=false)Integer sex,
 			@RequestParam(value="rank",required=false)Integer rank,
 			@RequestParam(value="accountId",required=false)Long accountId,
+			@RequestParam(value="createDate",required=false)Date createDate,
 			@RequestParam(value="pageNum",defaultValue="1",required=false)int pageNum,
 			@RequestParam(value="pageSize",defaultValue="10",required=false) int pageSize,
 			@RequestParam(value="orderName",required=false,defaultValue="createDate") String orderName,
@@ -122,6 +125,9 @@ public class AssessController extends BaseController<Assess,Long> {
 		map.put("rank", rank);
 		map.put("account_id", accountId);
 		wrapper.allEq(MyDom4jUtil.getNoNullMap(map));
+		if(createDate!=null){
+			wrapper.andNew().le("DATE(create_date)", DateUtil.dateFormatSimpleDate(createDate,"yyyy-MM-dd"));
+		}
 		StateResultList<List<Assess>> rl = super.list(pageNum, pageSize, orderName, orderWay,wrapper);
 		rl.getData().forEach(e->{
 			Account account = accountService.load(e.getAccountId());
@@ -164,7 +170,7 @@ public class AssessController extends BaseController<Assess,Long> {
 	}
 	/**
 	 * 测评增加
-	 * @return 
+	 * @return
 	 */
 	@ApiOperation(value = "测评增加", notes = "测评增加")
 	@RequestMapping(value = "/add", method = {RequestMethod.GET,RequestMethod.POST})
@@ -238,5 +244,5 @@ public class AssessController extends BaseController<Assess,Long> {
 			});
 		 return l;
 	}
-	
+
 }

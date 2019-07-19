@@ -256,7 +256,7 @@ export default {
                   }
                 }
               }, '单项测评');
-              var varhh4=  h('Button', {
+              var vh2=  h('Button', {
                 props: {
                   type: 'success',
                   size: 'small'
@@ -269,21 +269,86 @@ export default {
                          let  pp=JSON.stringify({
                       currentPage:1,//当前页
                       assessId:params.row.assessId,
+                      accountId:params.row.accountId,
+                      pageSize:2,
+                      createDate:params.row.createDate.substr(0,10)+" 00:00:00",
                     });
                     open("/#/data/"+pp,"_blank")
-                    /* this.$router.push('/data/'+pp);
-                    setTimeout(()=>{
-                        this.Hub.$emit('navroad',this.$router.currentRoute); //Hub触发事件
-                    },200) */
                   }
                 }
-              }, '报告');
+              }, '2次报告');
+              var vh3=  h('Button', {
+                props: {
+                  type: 'success',
+                  size: 'small'
+                },
+                style: {
+                  margin: '5px'
+                },
+                on: {
+                  click: () => {
+                         let  pp=JSON.stringify({
+                      currentPage:1,//当前页
+                      assessId:params.row.assessId,
+                      accountId:params.row.accountId,
+                       pageSize:3,
+                       createDate:params.row.createDate.substr(0,10)+" 00:00:00",
+                    });
+                    open("/#/data/"+pp,"_blank")
+                  }
+                }
+              }, '3次报告');
+              var vh7=  h('Button', {
+                props: {
+                  type: 'success',
+                  size: 'small'
+                },
+                style: {
+                  margin: '5px'
+                },
+                on: {
+                  click: () => {
+                         let  pp=JSON.stringify({
+                      currentPage:1,//当前页
+                      assessId:params.row.assessId,
+                      accountId:params.row.accountId,
+                       pageSize:7,
+                       createDate:params.row.createDate.substr(0,10)+" 00:00:00",
+                    });
+                    open("/#/data/"+pp,"_blank")
+                  }
+                }
+              }, '7次报告');
+              var vh30=  h('Button', {
+                props: {
+                  type: 'success',
+                  size: 'small'
+                },
+                style: {
+                  margin: '5px'
+                },
+                on: {
+                  click: () => {
+                         let  pp=JSON.stringify({
+                      currentPage:1,//当前页
+                      assessId:params.row.assessId,
+                      accountId:params.row.accountId,
+                       pageSize:30,
+                       createDate:params.row.createDate.substr(0,10)+" 00:00:00",
+                    });
+                    open("/#/data/"+pp,"_blank")
+                  }
+                }
+              }, '30次报告');
             	var s=h("div","");
 			s=h("div",[
               //varhh1,
               //varhh2,
               varhh3,
-              varhh4,
+              vh2,
+              vh3,
+              vh7,
+              vh30,
             ]);
             return s;
           }
