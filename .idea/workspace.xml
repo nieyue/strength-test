@@ -2,104 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf5ed019-4bf6-48d6-bbb9-8b11a0999c73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/css/app.7b3b27d5fff8bb6cccc2d8e81ae64172.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/css/app.7b3b27d5fff8bb6cccc2d8e81ae64172.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/fonts/ionicons.143146f.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/1.85f492db03e823934276.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/1.85f492db03e823934276.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/10.e49cc43b321d2845cd24.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/10.e49cc43b321d2845cd24.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/11.be3ae3196c132bc91985.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/11.be3ae3196c132bc91985.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/12.608229e35e5ffe275a8e.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/12.608229e35e5ffe275a8e.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/13.8e64fadcc5fc9328ef4e.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/13.8e64fadcc5fc9328ef4e.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/14.a600b1c56ff66c118e17.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/14.a600b1c56ff66c118e17.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/15.d21addf62d2f93c19149.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/15.d21addf62d2f93c19149.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/16.f9250d33446cfef22c81.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/16.f9250d33446cfef22c81.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/17.d8f5fb1c8f4917e4621e.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/17.d8f5fb1c8f4917e4621e.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/18.7e2b8d58b089d0c5a024.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/18.7e2b8d58b089d0c5a024.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/3.c58e3ed7f81260fd532d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/3.c58e3ed7f81260fd532d.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/8.1bbab950c80d0ea9125b.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/8.1bbab950c80d0ea9125b.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/9.b3d3eec21bef9203083e.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/9.b3d3eec21bef9203083e.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/app.35710bb65aa6fc7acf2c.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/app.35710bb65aa6fc7acf2c.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/manifest.4a5429bf1da12882d6c5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/manifest.4a5429bf1da12882d6c5.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/vendor.adf97f16cb6eaca2a094.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/vendor.adf97f16cb6eaca2a094.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/strength-test-core/start.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/components/Data.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/Data.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/components/common/MyEcharts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/common/MyEcharts.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/components/main/assess/Assess.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/main/assess/Assess.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/components/main/assess/AssessProject.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/main/assess/AssessProject.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/components/service/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/service/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/sql/strength_test_db_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/strength-test-core/sql/strength_test_db_data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/java/com/nieyue/controller/AssessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/strength-test-core/src/main/java/com/nieyue/controller/AssessController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/java/com/nieyue/service/impl/AssessServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/strength-test-core/src/main/java/com/nieyue/service/impl/AssessServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/css/app.1e5b6f7821f0b057ac857b4ae407cad7.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/css/app.1e5b6f7821f0b057ac857b4ae407cad7.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/img/ionicons.a2c4a26.svg" beforeDir="false" afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/img/ionicons.a2c4a26.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/0.ca67e87d8c000a42e592.js" beforeDir="false" afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/0.ca67e87d8c000a42e592.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/1.a2c6188e9a78d48be946.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/1.a2c6188e9a78d48be946.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/10.dd0fa57ce388d576f8bb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/10.dd0fa57ce388d576f8bb.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/11.1e225a5fa6a5efbda318.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/11.1e225a5fa6a5efbda318.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/12.83416f3a0893879edbf7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/12.83416f3a0893879edbf7.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/13.bbabe8bdb2bbe99b2ca6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/13.bbabe8bdb2bbe99b2ca6.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/14.d64f2c8e80d16fd439be.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/14.d64f2c8e80d16fd439be.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/15.c26fffebf40966bc73ed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/15.c26fffebf40966bc73ed.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/16.6c42b4b588757db5ed27.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/16.6c42b4b588757db5ed27.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/17.ccbf9c6225fba9d33b9f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/17.ccbf9c6225fba9d33b9f.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/18.814a6cca2a55720c93ec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/18.814a6cca2a55720c93ec.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/19.516192c4f27cb5e04417.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/19.516192c4f27cb5e04417.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/2.1cca6ad0d6d0608fcad8.js" beforeDir="false" afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/2.1cca6ad0d6d0608fcad8.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/20.a914657e7f1f1f70aa1d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/20.a914657e7f1f1f70aa1d.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/21.04becc431691bd05595d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/21.04becc431691bd05595d.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/22.c61e477c6b5911ddae47.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/22.c61e477c6b5911ddae47.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/23.7aae9b274c122e68acf7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/23.7aae9b274c122e68acf7.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/3.2b370d78e2cfd93e31ec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/3.2b370d78e2cfd93e31ec.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/4.94bfabe86c8f659719c4.js" beforeDir="false" afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/4.94bfabe86c8f659719c4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/5.9b495fda1184d7864fa2.js" beforeDir="false" afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/5.9b495fda1184d7864fa2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/6.f88d45e3a9f009da6c14.js" beforeDir="false" afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/6.f88d45e3a9f009da6c14.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/7.3e86ad5b3e5f94727d9d.js" beforeDir="false" afterPath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/7.3e86ad5b3e5f94727d9d.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/8.2f4b2ed2346ad8951cf7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/8.2f4b2ed2346ad8951cf7.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/9.eae42707040de268a80f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/9.eae42707040de268a80f.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/app.23db55139638a244ffc9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/app.23db55139638a244ffc9.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/manifest.d2c0df607c1709f9dd0c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/manifest.d2c0df607c1709f9dd0c.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/vendor.c621865fab3f230c9faa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/static/js/vendor.c621865fab3f230c9faa.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strength-test-core/实例图.png" beforeDir="false" afterPath="$PROJECT_DIR$/strength-test-core/实例图.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -133,7 +39,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/java/com/nieyue/service/impl/AssessServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
+            <state relative-caret-position="1290">
               <caret line="65" column="32" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="32" />
             </state>
           </provider>
@@ -154,17 +60,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/java/com/nieyue/controller/AssessController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
+            <state relative-caret-position="2820">
               <caret line="112" column="33" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2998#3013#0" expanded="true" />
-                <element signature="e#3490#3505#0" expanded="true" />
-                <element signature="e#5562#5577#0" expanded="true" />
-                <element signature="e#6043#6058#0" expanded="true" />
-                <element signature="e#6499#6514#0" expanded="true" />
-                <element signature="e#9240#9255#0" expanded="true" />
-                <element signature="e#10174#10189#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -182,14 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://D:/java/maven/apache-maven-3.3.3/mvnRespo/com/baomidou/mybatis-plus-support/2.3/mybatis-plus-support-2.3.jar!/com/baomidou/mybatisplus/mapper/Wrapper.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
+            <state relative-caret-position="5730">
               <caret line="233" column="22" selection-start-line="233" selection-start-column="22" selection-end-line="233" selection-end-column="22" />
-              <folding>
-                <element signature="e#7144#7145#0" expanded="true" />
-                <element signature="e#7196#7197#0" expanded="true" />
-                <element signature="e#7482#7483#0" expanded="true" />
-                <element signature="e#7534#7535#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -203,11 +96,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
+            <state relative-caret-position="171">
               <caret line="68" column="21" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/strength-test-core/start.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="2" column="90" selection-start-line="2" selection-start-column="90" selection-end-line="2" selection-end-column="90" />
             </state>
           </provider>
         </entry>
@@ -310,6 +212,7 @@
         <option value="$PROJECT_DIR$/strength-test-core/src/main/java/com/nieyue/controller/AssessController.java" />
         <option value="$PROJECT_DIR$/strength-test-core/src/main/resources/static/admin/index.html" />
         <option value="$PROJECT_DIR$/strength-test-core/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/strength-test-core/start.bat" />
       </list>
     </option>
   </component>
@@ -345,8 +248,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="96" />
-    <option name="y" value="53" />
+    <option name="x" value="42" />
+    <option name="y" value="14" />
     <option name="width" value="1733" />
     <option name="height" value="990" />
   </component>
@@ -356,7 +259,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -369,67 +271,11 @@
               <item name="strength-test" type="462c0819:PsiDirectoryNode" />
               <item name="strength-test-core" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="strength-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="strength-test" type="462c0819:PsiDirectoryNode" />
-              <item name="strength-test-core" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="strength-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="strength-test" type="462c0819:PsiDirectoryNode" />
-              <item name="strength-test-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="strength-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="strength-test" type="462c0819:PsiDirectoryNode" />
-              <item name="strength-test-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="strength-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="strength-test" type="462c0819:PsiDirectoryNode" />
-              <item name="strength-test-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="strength-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="strength-test" type="462c0819:PsiDirectoryNode" />
-              <item name="strength-test-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="strength-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="strength-test" type="462c0819:PsiDirectoryNode" />
-              <item name="strength-test-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="strength-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="strength-test" type="462c0819:PsiDirectoryNode" />
-              <item name="strength-test-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -441,7 +287,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../AndroidStudio/SDKTools" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563565502330" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563604299780" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../authenticity" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -548,17 +394,17 @@
       <workItem from="1563328711011" duration="2654000" />
       <workItem from="1563411753849" duration="1895000" />
       <workItem from="1563497972058" duration="4825000" />
+      <workItem from="1563592586512" duration="2681000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105473000" />
+    <option name="totallyTimeSpent" value="108450000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="96" y="53" width="1733" height="990" extended-state="0" />
-    <editor active="true" />
+    <frame x="42" y="14" width="1733" height="990" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2962071" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30102348" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -568,13 +414,13 @@
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.70976394" visible="true" weight="0.27577937" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49892703" weight="0.37529975" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.70976394" weight="0.27577937" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49892703" visible="true" weight="0.37529975" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.26" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.25779375" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50107294" side_tool="true" weight="0.5222222" />
       <window_info anchor="bottom" id="SonarLint" order="10" />
       <window_info anchor="bottom" id="Problems" order="11" weight="0.32963374" />
@@ -602,9 +448,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/resources/static/resources/img/daozhang.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/resources/static/resources/img/prize/bg_02.jpg" />
     <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/resources/static/resources/img/prize/bg_01.jpg" />
     <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/resources/static/resources/img/prize/bg_03.jpg" />
@@ -718,16 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/java/com/nieyue/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/java/com/nieyue/controller/BaseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
@@ -753,13 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/java/com/nieyue/bean/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="55" column="7" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -791,26 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/java/com/nieyue/service/impl/AssessServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="65" column="32" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/java/maven/apache-maven-3.3.3/mvnRespo/com/baomidou/mybatis-plus-support/2.3/mybatis-plus-support-2.3.jar!/com/baomidou/mybatisplus/mapper/Wrapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="233" column="22" selection-start-line="233" selection-start-column="22" selection-end-line="233" selection-end-column="22" />
-          <folding>
-            <element signature="e#7144#7145#0" expanded="true" />
-            <element signature="e#7196#7197#0" expanded="true" />
-            <element signature="e#7482#7483#0" expanded="true" />
-            <element signature="e#7534#7535#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/java/com/nieyue/util/DateUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -818,19 +624,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/java/com/nieyue/service/impl/AssessServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1290">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/java/com/nieyue/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/java/com/nieyue/controller/AssessController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
+        <state relative-caret-position="2820">
           <caret line="112" column="33" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2998#3013#0" expanded="true" />
-            <element signature="e#3490#3505#0" expanded="true" />
-            <element signature="e#5562#5577#0" expanded="true" />
-            <element signature="e#6043#6058#0" expanded="true" />
-            <element signature="e#6499#6514#0" expanded="true" />
-            <element signature="e#9240#9255#0" expanded="true" />
-            <element signature="e#10174#10189#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -842,6 +658,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://D:/java/maven/apache-maven-3.3.3/mvnRespo/com/baomidou/mybatis-plus-support/2.3/mybatis-plus-support-2.3.jar!/com/baomidou/mybatisplus/mapper/Wrapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5730">
+          <caret line="233" column="22" selection-start-line="233" selection-start-column="22" selection-end-line="233" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/resources/application-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -849,10 +672,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/java/com/nieyue/bean/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="55" column="7" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/strength-test-core/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
+        <state relative-caret-position="171">
           <caret line="68" column="21" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/strength-test-core/start.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="90" selection-start-line="2" selection-start-column="90" selection-end-line="2" selection-end-column="90" />
         </state>
       </provider>
     </entry>
