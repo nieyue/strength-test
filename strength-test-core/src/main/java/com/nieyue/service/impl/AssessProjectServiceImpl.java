@@ -54,14 +54,17 @@ public class AssessProjectServiceImpl extends BaseServiceImpl<AssessProject,Long
         Standard standard=new Standard();
         //最差的，不良
         standard.setRank(1);
+        standard.setLow(-999999.0);
         if(sl.size()>0){
             //存放临时的
             for (int i = 0; i < sl.size(); i++) {
                 Standard s = sl.get(i);
                 //大于等于的就是符合要求
                 if(assessProject.getScore()>=s.getLow()){
-                    //只留最高等级的
-                    if(standard.getRank()<=s.getRank()){
+                    //只留分数最高的
+                    if(standard.getLow()<=s.getLow()){
+                        //临时最低
+                        standard.setLow(s.getLow());
                         standard=s;
                         assessProject.setItem(standard.getItem());
                     }
@@ -99,14 +102,17 @@ public class AssessProjectServiceImpl extends BaseServiceImpl<AssessProject,Long
         Standard standard=new Standard();
         //最差的，不良
         standard.setRank(1);
+        standard.setLow(-999999.0);
         if(sl.size()>0){
             //存放临时的
             for (int i = 0; i < sl.size(); i++) {
                 Standard s = sl.get(i);
                 //大于等于的就是符合要求
                 if(assessProject.getScore()>=s.getLow()){
-                    //只留最高等级的
-                    if(standard.getRank()<=s.getRank()){
+                    //只留分数最高的
+                    if(standard.getLow()<=s.getLow()){
+                        //临时最低
+                        standard.setLow(s.getLow());
                         standard=s;
                         assessProject.setItem(standard.getItem());
                     }
