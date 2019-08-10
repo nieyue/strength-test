@@ -136,7 +136,7 @@ public class AssessController extends BaseController<Assess,Long> {
 			Map<String,Object> map2=new HashMap<String,Object>();
 			map2.put("assess_id", e.getAssessId());
 			wrapper2.allEq(MyDom4jUtil.getNoNullMap(map2));
-			List<AssessProject> apl = assessProjectService.simplelist(wrapper2);
+			List<AssessProject> apl = assessProjectService.list(1,Integer.MAX_VALUE,"assess_project_id","desc",wrapper2);
 			e.setAssessProjectList((ArrayList<AssessProject>)apl);
 			apl.forEach(ee->{
 				//放入项目
@@ -149,7 +149,7 @@ public class AssessController extends BaseController<Assess,Long> {
 				map3.put("project_id", ee.getProjectId());
 				map3.put("rank", 3);//合格
 				wrapper3.allEq(MyDom4jUtil.getNoNullMap(map3));
-				List<Standard> standardList = standardService.simplelist(wrapper3);
+				List<Standard> standardList = standardService.list(1,Integer.MAX_VALUE,"standard_id","desc",wrapper3);
 				if(standardList.size()>0){
 					ee.setStandard(standardList.get(0));
 				}
